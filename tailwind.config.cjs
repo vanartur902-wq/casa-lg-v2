@@ -7,8 +7,13 @@ module.exports = {
         luxury: {
           gold: '#C5A059',
           dark: '#080808',
+          silver: '#E5E5E5',
           accent: '#1A1A1A'
         }
+      },
+      fontFamily: {
+        'display': ['"Cinzel"', 'serif'],
+        'sans': ['"Montserrat"', 'sans-serif'],
       }
     },
   },
