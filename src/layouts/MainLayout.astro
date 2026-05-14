@@ -1,0 +1,24 @@
+---
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import { ViewTransitions } from 'astro:transitions';
+import '../styles/global.css';
+
+interface Props { title: string; }
+const { title } = Astro.props;
+---
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+		<title>{title} | Casa L&G</title>
+		<ViewTransitions />
+	</head>
+	<body class="selection:bg-brand-gold selection:text-white">
+		<Navbar />
+		<main><slot /></main>
+		<Footer />
+	</body>
+</html>

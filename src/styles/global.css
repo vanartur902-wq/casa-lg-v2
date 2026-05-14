@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    /* Usamos el color de fondo definido en tu config de lujo */
+    @apply bg-[#080808] text-white font-sans antialiased;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+}
+
+/* ANIMACIÓN DE REVELADO "SIGNATURE" 
+   Un efecto de entrada más lento y fluido que el anterior.
+*/
+@keyframes revealPremium {
+  0% { 
+    opacity: 0; 
+    transform: translateY(30px) scale(0.98); 
+    filter: blur(15px); 
+  }
+  100% { 
+    opacity: 1; 
+    transform: translateY(0) scale(1); 
+    filter: blur(0); 
+  }
+}
+
+.reveal {
+  /* La curva cubic-bezier(0.16, 1, 0.3, 1) es el estándar de oro en interfaces de lujo */
+  animation: revealPremium 1.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform, opacity;
+}
+
+/* ZOOM CINEMÁTICO
+   Reducimos la velocidad para que sea casi imperceptible, 
+   dando una sensación de "fotografía viva".
+*/
+@keyframes cinematicZoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+
+.zoom-bg {
+  animation: cinematicZoom 45s infinite alternate ease-in-out;
+}
+
+/* EFECTO DE BRILLO PARA BOTONES (Opcional)
+   Añade un destello premium al pasar el mouse.
+*/
+.btn-premium {
+  @apply relative overflow-hidden transition-all duration-500;
+}
+
+.btn-premium::after {
+  content: '';
+  @apply absolute top-0 -left-[100%] w-full h-full;
+  background: linear-gradient(90deg, transparent, rgba(197, 160, 89, 0.2), transparent);
+  transition: all 0.6s;
+}
+
+.btn-premium:hover::after {
+  left: 100%;
+}

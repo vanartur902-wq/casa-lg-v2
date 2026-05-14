@@ -1,0 +1,22 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import ProductCard from '../components/ProductCard.astro';
+---
+
+<MainLayout title="Catálogo Completo">
+  <section class="pt-40 pb-20 px-6 bg-brand-cream min-h-screen">
+    <div class="max-w-7xl mx-auto">
+      <div class="mb-16">
+        <h1 class="text-5xl font-premium text-brand-dark mb-4 tracking-tighter">Colección <span class="text-brand-gold italic">Premium</span></h1>
+        <p class="text-brand-dark/50 text-sm tracking-widest uppercase">Explora la excelencia en cada pieza</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <ProductCard title="Girasoles de Oro" price="S/45.00" image="/images/girasol.jpg" category="Destacados" />
+        <ProductCard title="Caja de Gala" price="S/90.00" image="/images/gala.jpg" category="Lujo" />
+        <ProductCard title="Detalle Místico" price="S/65.00" image="/images/mistico.jpg" category="Especial" />
+        <ProductCard title="Ramo Real" price="$110.00" image="/images/real.jpg" category="Premium" />
+      </div>
+    </div>
+  </section>
+</MainLayout>

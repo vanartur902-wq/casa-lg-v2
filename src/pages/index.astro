@@ -1,0 +1,41 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Hero from '../components/Hero.astro';
+import ProductCard from '../components/ProductCard.astro';
+---
+<MainLayout title="Exclusividad | Casa L&G">
+  <Hero />
+  
+  <section class="py-32 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+        <div>
+          <h2 class="font-display text-4xl md:text-6xl mb-4">Nuestra <span class="text-luxury-gold">Curaduría</span></h2>
+          <p class="text-white/40 tracking-widest text-[10px] uppercase">Piezas seleccionadas para el gusto más exigente</p>
+        </div>
+        <a href="/catalogo" class="text-luxury-gold text-[10px] tracking-widest uppercase border-b border-luxury-gold pb-1 hover:text-white hover:border-white transition-all">Ver Todo</a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <ProductCard 
+          title="Ramo Imperial" 
+          price="S/150.00" 
+          image="https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?auto=format&fit=crop&q=80&w=800" 
+          category="Flores Naturales"
+        />
+        <ProductCard 
+          title="Caja Oro Rosa" 
+          price="S/95.00" 
+          image="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&q=80&w=800" 
+          category="Gifts VIP"
+        />
+        <ProductCard 
+          title="Orquídea Negra" 
+          price="S/210.00" 
+          image="https://images.unsplash.com/photo-1596436889106-be35e843f974?auto=format&fit=crop&q=80&w=800" 
+          category="Edición Limitada"
+        />
+      </div>
+    </div>
+  </section>
+</MainLayout>
