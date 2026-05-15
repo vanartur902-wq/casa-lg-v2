@@ -2,11 +2,11 @@
 // src/components/Navbar.astro
 ---
 <nav class="fixed w-full z-[100] bg-brand-dark/95 backdrop-blur-md border-b border-brand-gold/10">
-  <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center relative">
+  <div class="max-w-7xl mx-auto px-4 py-5 flex justify-between items-center relative">
     
-    <div class="flex flex-col z-[110]">
+    <div class="flex flex-col z-[110] pl-2">
       <span class="text-2xl font-premium tracking-[0.4em] text-white leading-none">CASA L&G</span>
-      <span class="text-[8px] uppercase tracking-[0.5em] text-brand-gold mt-1">Detalles para días especiales y flores</span>
+      <span class="text-[8px] uppercase tracking-[0.5em] text-brand-gold mt-1 italic">Detalles para días especiales y flores</span>
     </div>
     
     <div class="hidden md:flex absolute left-1/2 -translate-x-1/2 space-x-12 font-body text-[10px] uppercase tracking-[0.2em]">
@@ -15,39 +15,44 @@
       <a href="/contacto" class="text-white/80 hover:text-brand-gold transition-colors duration-300">Pedidos</a>
     </div>
 
-    <button id="menu-toggle" class="md:hidden z-[120] p-2 focus:outline-none" aria-label="Abrir menú">
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M4 7H20M4 12H20M4 17H20" stroke="#C5A059" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <button id="menu-toggle" class="md:hidden z-[120] p-2 focus:outline-none pr-0" aria-label="Abrir menú">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 7H20M4 12H20M4 17H20" stroke="#C5A059" stroke-width="1.5" stroke-linecap="round"/>
       </svg>
     </button>
 
-    <div id="mobile-menu" class="fixed top-0 right-0 h-screen w-[60vw] bg-brand-dark/98 backdrop-blur-2xl border-l border-brand-gold/20 flex flex-col items-start px-10 justify-center space-y-10 shadow-2xl opacity-0 invisible translate-x-full transition-all duration-500 md:hidden z-[115]">
+    <div id="mobile-menu" class="fixed top-0 right-0 h-screen w-[55vw] bg-[#0a0a0a]/95 backdrop-blur-2xl border-l border-brand-gold/20 flex flex-col items-center justify-center space-y-12 shadow-[ -20px_0_50px_rgba(0,0,0,0.5)] opacity-0 invisible translate-x-full transition-all duration-500 md:hidden z-[115]">
       
-      <a href="/" class="mobile-link text-lg font-premium tracking-[0.3em] text-white/70 hover:text-brand-gold">INICIO</a>
-      <a href="/catalogo" class="mobile-link text-lg font-premium tracking-[0.3em] text-white/70 hover:text-brand-gold">CATÁLOGO</a>
-      <a href="/contacto" class="mobile-link text-lg font-premium tracking-[0.3em] text-white/70 hover:text-brand-gold">PEDIDOS</a>
-      
-      <div class="h-[1px] w-8 bg-brand-gold/30 my-2"></div>
-      
-      <a href="https://wa.me/51953435738" class="text-[10px] tracking-[0.4em] text-brand-gold uppercase font-bold">WhatsApp VIP</a>
-      
-      <button class="mobile-link absolute top-8 right-8 text-brand-gold/50">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      <button class="mobile-link absolute top-8 right-6 text-brand-gold/60 hover:text-brand-gold transition-colors">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
       </button>
+
+      <a href="/" class="mobile-link text-sm font-premium tracking-[0.4em] text-white/60 hover:text-brand-gold transition-all uppercase">Inicio</a>
+      <a href="/catalogo" class="mobile-link text-sm font-premium tracking-[0.4em] text-white/60 hover:text-brand-gold transition-all uppercase">Catálogo</a>
+      <a href="/contacto" class="mobile-link text-sm font-premium tracking-[0.4em] text-white/60 hover:text-brand-gold transition-all uppercase">Pedidos</a>
+      
+      <div class="h-[1px] w-6 bg-brand-gold/20"></div>
+      
+      <a href="https://wa.me/51953435738" class="text-[9px] tracking-[0.5em] text-brand-gold uppercase font-bold text-center leading-relaxed">WhatsApp<br/>VIP</a>
     </div>
 
   </div>
 </nav>
 
 <style>
-  /* Clases de apertura */
+  /* Estados del menú */
   .menu-open #mobile-menu {
     @apply opacity-100 visible translate-x-0;
   }
 
-  /* Bloqueo de scroll en el fondo */
+  /* Bloqueo de scroll suave */
   :global(body.no-scroll) {
     overflow: hidden;
+  }
+
+  /* Fuente Premium (Asegúrate de tenerla en tu CSS global o Layout) */
+  .font-premium {
+    font-family: 'Cinzel', serif; /* O la que estés usando para el logo */
   }
 </style>
 
@@ -58,11 +63,13 @@
     const links = document.querySelectorAll('.mobile-link');
 
     if (btn && nav) {
-      btn.onclick = () => {
+      btn.onclick = (e) => {
+        e.stopPropagation();
         nav.classList.toggle('menu-open');
         document.body.classList.toggle('no-scroll');
       };
 
+      // Cerrar al hacer clic fuera o en links
       links.forEach(link => {
         link.onclick = () => {
           nav.classList.remove('menu-open');
@@ -72,7 +79,6 @@
     }
   }
 
-  // Se ejecuta al cargar y cada vez que Astro cambia de página
   setupNavbar();
   document.addEventListener('astro:after-swap', setupNavbar);
 </script>
