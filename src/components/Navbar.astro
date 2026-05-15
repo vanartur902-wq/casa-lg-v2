@@ -17,30 +17,48 @@
 
     <button id="menu-toggle" class="md:hidden z-[120] p-2 focus:outline-none pr-0" aria-label="Abrir menú">
       <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M4 7H20M4 12H20M4 17H20" stroke="#C5A059" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M4 7H20M4 12H20M4 17H20" stroke="#C5A059" stroke-width="1.2" stroke-linecap="round"/>
       </svg>
     </button>
 
-    <div id="mobile-menu" class="fixed top-0 right-0 h-screen w-[45vw] bg-[#0a0a0a]/98 backdrop-blur-2xl border-l border-brand-gold/20 flex flex-col items-center pt-32 space-y-12 shadow-2xl opacity-0 invisible translate-x-full transition-all duration-500 md:hidden z-[115]">
+    <div id="mobile-menu" class="fixed top-0 right-0 h-screen w-[45vw] bg-black/90 backdrop-blur-3xl border-l border-brand-gold/20 flex flex-col items-start pt-24 px-8 shadow-[-20px_0_40px_rgba(0,0,0,0.8)] opacity-0 invisible translate-x-full transition-all duration-700 md:hidden z-[115]">
       
-      <button class="mobile-link absolute top-8 right-6 text-brand-gold/60 hover:text-brand-gold transition-colors">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
-      </button>
+      <span class="text-[9px] tracking-[0.4em] text-brand-gold/40 uppercase mb-12">Navegación</span>
 
-      <a href="/" class="mobile-link text-[11px] font-premium tracking-[0.4em] text-white/70 hover:text-brand-gold transition-all uppercase">Inicio</a>
-      <a href="/catalogo" class="mobile-link text-[11px] font-premium tracking-[0.4em] text-white/70 hover:text-brand-gold transition-all uppercase">Catálogo</a>
-      <a href="/contacto" class="mobile-link text-[11px] font-premium tracking-[0.4em] text-white/70 hover:text-brand-gold transition-all uppercase">Pedidos</a>
-      
-      <div class="h-[1px] w-6 bg-brand-gold/20 my-4"></div>
-      
-      <a href="https://wa.me/51953435738" class="text-[8px] tracking-[0.5em] text-brand-gold uppercase font-bold text-center leading-relaxed px-4">WhatsApp<br/>VIP</a>
+      <div class="flex flex-col space-y-10 w-full">
+        <a href="/" class="mobile-link group flex flex-col items-start">
+            <span class="text-[10px] text-brand-gold/50 mb-1">01</span>
+            <span class="text-sm font-premium tracking-[0.4em] text-white/80 group-hover:text-brand-gold transition-all uppercase">Inicio</span>
+        </a>
+        
+        <a href="/catalogo" class="mobile-link group flex flex-col items-start">
+            <span class="text-[10px] text-brand-gold/50 mb-1">02</span>
+            <span class="text-sm font-premium tracking-[0.4em] text-white/80 group-hover:text-brand-gold transition-all uppercase">Catálogo</span>
+        </a>
+        
+        <a href="/contacto" class="mobile-link group flex flex-col items-start">
+            <span class="text-[10px] text-brand-gold/50 mb-1">03</span>
+            <span class="text-sm font-premium tracking-[0.4em] text-white/80 group-hover:text-brand-gold transition-all uppercase">Pedidos</span>
+        </a>
+
+        <div class="h-[1px] w-full bg-gradient-to-r from-brand-gold/30 to-transparent my-6"></div>
+        
+        <a href="https://wa.me/51953435738" class="mobile-link flex flex-col items-start">
+            <span class="text-[8px] tracking-[0.5em] text-brand-gold uppercase font-bold leading-relaxed">WhatsApp VIP</span>
+            <span class="text-[7px] text-white/40 tracking-widest mt-1 italic italic">Atención Personalizada</span>
+        </a>
+      </div>
+
+      <button class="mobile-link absolute top-8 right-6 text-brand-gold/40 hover:text-brand-gold transition-colors">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
     </div>
 
   </div>
 </nav>
 
 <style>
-  /* Estados del menú */
+  /* Animación suave de entrada */
   .menu-open #mobile-menu {
     @apply opacity-100 visible translate-x-0;
   }
@@ -51,7 +69,12 @@
   }
 
   .font-premium {
-    font-family: 'Cinzel', serif;
+    font-family: 'Cinzel', serif; /* Cambia por tu fuente premium si es otra */
+  }
+
+  /* Efecto de enlace activo */
+  .mobile-link:active span {
+    @apply text-brand-gold;
   }
 </style>
 
