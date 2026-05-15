@@ -2,13 +2,19 @@
 // src/components/Navbar.astro
 ---
 <nav class="fixed w-full z-[100] bg-brand-dark/95 backdrop-blur-md border-b border-brand-gold/10">
-  <div class="max-w-7xl mx-auto px-4 py-5 flex justify-between items-center relative">
+  <div class="max-w-7xl mx-auto px-4 py-5 flex justify-between items-center relative min-h-[80px]">
     
     <div class="flex flex-col z-[110] pl-2">
       <span class="text-2xl font-premium tracking-[0.4em] text-white leading-none">CASA L&G</span>
       <span class="text-[8px] uppercase tracking-[0.5em] text-brand-gold mt-1 italic">Detalles para días especiales y flores</span>
     </div>
     
+    <div class="hidden md:flex absolute left-1/2 -translate-x-1/2 space-x-12 font-body text-[10px] uppercase tracking-[0.2em] z-[105]">
+      <a href="/" class="text-white/80 hover:text-brand-gold transition-colors duration-300">Inicio</a>
+      <a href="/catalogo" class="text-white/80 hover:text-brand-gold transition-colors duration-300">Catálogo</a>
+      <a href="/contacto" class="text-white/80 hover:text-brand-gold transition-colors duration-300">Pedidos</a>
+    </div>
+
     <button id="menu-toggle" class="md:hidden z-[120] p-2 focus:outline-none pr-0 transition-opacity duration-300" aria-label="Abrir menú">
       <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M4 7H20M4 12H20M4 17H20" stroke="#C5A059" stroke-width="1.2" stroke-linecap="round"/>
@@ -25,34 +31,27 @@
         <a href="/" class="mobile-link group">
             <span class="block text-[11px] font-premium tracking-[0.3em] text-white/90 group-hover:text-brand-gold transition-all uppercase">Inicio</span>
         </a>
-        
         <a href="/catalogo" class="mobile-link group">
             <span class="block text-[11px] font-premium tracking-[0.3em] text-white/90 group-hover:text-brand-gold transition-all uppercase">Catálogo</span>
         </a>
-        
         <a href="/contacto" class="mobile-link group">
             <span class="block text-[11px] font-premium tracking-[0.3em] text-white/90 group-hover:text-brand-gold transition-all uppercase">Pedidos</span>
         </a>
-
         <div class="h-[1px] w-8 bg-brand-gold/30 my-2"></div>
-        
         <a href="https://wa.me/51953435738" class="mobile-link">
             <span class="text-[8px] tracking-[0.3em] text-brand-gold uppercase font-bold italic">WhatsApp VIP</span>
         </a>
       </div>
     </div>
-
   </div>
 </nav>
 
 <style>
-  /* Control de visibilidad del botón hamburguesa */
   .menu-open #menu-toggle {
     opacity: 0;
     pointer-events: none;
   }
 
-  /* Animación del panel */
   .menu-open #mobile-menu {
     @apply opacity-100 visible translate-x-0;
   }
@@ -74,8 +73,10 @@
     const links = document.querySelectorAll('.mobile-link');
 
     const toggleMenu = () => {
-      nav.classList.toggle('menu-open');
-      document.body.classList.toggle('no-scroll');
+      if (nav) {
+        nav.classList.toggle('menu-open');
+        document.body.classList.toggle('no-scroll');
+      }
     };
 
     if (btnToggle && btnClose && nav) {
