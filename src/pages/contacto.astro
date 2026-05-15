@@ -1,20 +1,38 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
----
 
-<MainLayout title="Atención Exclusiva">
-  <section class="h-screen flex items-center justify-center bg-brand-dark px-6">
-    <div class="max-w-2xl text-center border border-brand-gold/20 p-16 backdrop-blur-md relative overflow-hidden">
-      <div class="absolute -top-10 -left-10 w-32 h-32 bg-brand-gold/5 rounded-full blur-3xl"></div>
+// Configuración del mensaje automático
+const telefono = "51953435738";
+const mensaje = encodeURIComponent("Hola Casa L&G, deseo solicitar información sobre un detalle exclusivo.");
+const whatsappLink = `https://wa.me/${telefono}?text=${mensaje}`;
+---
+<MainLayout title="Pedidos VIP | Casa L&G">
+  <section class="py-32 px-6 bg-[#080808] flex flex-col items-center min-h-screen">
+    <div class="max-w-3xl w-full text-center reveal">
+      <p class="text-[#C5A059] tracking-widest text-[10px] uppercase mb-4">Atención Personalizada</p>
+      <h1 class="font-['Cinzel'] text-4xl md:text-6xl text-white mb-12 tracking-widest">PEDIDOS ESPECIALES</h1>
       
-      <h2 class="text-brand-cream font-premium text-4xl mb-6 tracking-widest uppercase">Haz tu Pedido</h2>
-      <p class="text-brand-rose font-body mb-10 tracking-[0.1em] text-sm leading-loose">
-        Cada detalle es una obra de arte. Contáctanos para personalizar tu experiencia y asegurar la perfección en tu entrega.
-      </p>
-      
-      <a href="https://wa.me/+51953435738" target="_blank" class="inline-block bg-brand-gold text-brand-dark px-12 py-5 font-bold uppercase text-[10px] tracking-[0.4em] hover:bg-brand-cream hover:tracking-[0.5em] transition-all duration-700 shadow-2xl">
-        WhatsApp VIP Directo
-      </a>
+      <div class="bg-[#1A1A1A] p-12 border border-white/5 rounded-sm shadow-2xl">
+        <p class="text-white/60 font-light leading-relaxed mb-10 italic">
+          "La exclusividad reside en los detalles que perduran."
+        </p>
+        <p class="text-white/80 font-light leading-relaxed mb-10">
+          Para garantizar la excelencia que nos define, gestionamos cada solicitud de forma individual a través de nuestra línea de atención prioritaria.
+        </p>
+        
+        <a 
+          href={whatsappLink}
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="group relative inline-block w-full py-5 bg-[#C5A059] text-black font-semibold tracking-widest uppercase text-xs transition-all hover:bg-white hover:scale-[1.02] active:scale-[0.98]"
+        >
+          Contactar vía WhatsApp VIP
+        </a>
+        
+        <p class="mt-8 text-[9px] text-white/30 tracking-[0.2em] uppercase">
+          Horario de atención: Lunes a Sábado — 09:00 a 20:00
+        </p>
+      </div>
     </div>
   </section>
 </MainLayout>
