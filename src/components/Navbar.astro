@@ -21,19 +21,19 @@
       </svg>
     </button>
 
-    <div id="mobile-menu" class="fixed top-0 right-0 h-screen w-[55vw] bg-[#0a0a0a]/95 backdrop-blur-2xl border-l border-brand-gold/20 flex flex-col items-center justify-center space-y-12 shadow-[ -20px_0_50px_rgba(0,0,0,0.5)] opacity-0 invisible translate-x-full transition-all duration-500 md:hidden z-[115]">
+    <div id="mobile-menu" class="fixed top-0 right-0 h-screen w-[45vw] bg-[#0a0a0a]/98 backdrop-blur-2xl border-l border-brand-gold/20 flex flex-col items-center pt-32 space-y-12 shadow-2xl opacity-0 invisible translate-x-full transition-all duration-500 md:hidden z-[115]">
       
       <button class="mobile-link absolute top-8 right-6 text-brand-gold/60 hover:text-brand-gold transition-colors">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
       </button>
 
-      <a href="/" class="mobile-link text-sm font-premium tracking-[0.4em] text-white/60 hover:text-brand-gold transition-all uppercase">Inicio</a>
-      <a href="/catalogo" class="mobile-link text-sm font-premium tracking-[0.4em] text-white/60 hover:text-brand-gold transition-all uppercase">Catálogo</a>
-      <a href="/contacto" class="mobile-link text-sm font-premium tracking-[0.4em] text-white/60 hover:text-brand-gold transition-all uppercase">Pedidos</a>
+      <a href="/" class="mobile-link text-[11px] font-premium tracking-[0.4em] text-white/70 hover:text-brand-gold transition-all uppercase">Inicio</a>
+      <a href="/catalogo" class="mobile-link text-[11px] font-premium tracking-[0.4em] text-white/70 hover:text-brand-gold transition-all uppercase">Catálogo</a>
+      <a href="/contacto" class="mobile-link text-[11px] font-premium tracking-[0.4em] text-white/70 hover:text-brand-gold transition-all uppercase">Pedidos</a>
       
-      <div class="h-[1px] w-6 bg-brand-gold/20"></div>
+      <div class="h-[1px] w-6 bg-brand-gold/20 my-4"></div>
       
-      <a href="https://wa.me/51953435738" class="text-[9px] tracking-[0.5em] text-brand-gold uppercase font-bold text-center leading-relaxed">WhatsApp<br/>VIP</a>
+      <a href="https://wa.me/51953435738" class="text-[8px] tracking-[0.5em] text-brand-gold uppercase font-bold text-center leading-relaxed px-4">WhatsApp<br/>VIP</a>
     </div>
 
   </div>
@@ -45,14 +45,13 @@
     @apply opacity-100 visible translate-x-0;
   }
 
-  /* Bloqueo de scroll suave */
+  /* Bloqueo de scroll */
   :global(body.no-scroll) {
     overflow: hidden;
   }
 
-  /* Fuente Premium (Asegúrate de tenerla en tu CSS global o Layout) */
   .font-premium {
-    font-family: 'Cinzel', serif; /* O la que estés usando para el logo */
+    font-family: 'Cinzel', serif;
   }
 </style>
 
@@ -69,7 +68,6 @@
         document.body.classList.toggle('no-scroll');
       };
 
-      // Cerrar al hacer clic fuera o en links
       links.forEach(link => {
         link.onclick = () => {
           nav.classList.remove('menu-open');
