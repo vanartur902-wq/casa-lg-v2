@@ -9,17 +9,19 @@
       <span class="text-[8px] uppercase tracking-[0.5em] text-brand-gold mt-1 italic">Detalles para días especiales y flores</span>
     </div>
     
-    <button id="menu-toggle" class="md:hidden z-[120] p-2 focus:outline-none pr-0" aria-label="Abrir menú">
+    <button id="menu-toggle" class="md:hidden z-[120] p-2 focus:outline-none pr-0 transition-opacity duration-300" aria-label="Abrir menú">
       <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M4 7H20M4 12H20M4 17H20" stroke="#C5A059" stroke-width="1.2" stroke-linecap="round"/>
       </svg>
     </button>
 
-    <div id="mobile-menu" class="fixed top-0 right-0 h-screen w-[35vw] bg-black/80 backdrop-blur-2xl border-l border-brand-gold/20 flex flex-col items-start pt-16 px-6 shadow-[-10px_0_30px_rgba(0,0,0,0.5)] opacity-0 invisible translate-x-full transition-all duration-500 md:hidden z-[115]">
+    <div id="mobile-menu" class="fixed top-0 right-0 h-screen w-[35vw] bg-black/90 backdrop-blur-2xl border-l border-brand-gold/20 flex flex-col items-start pt-12 px-6 shadow-[-10px_0_30px_rgba(0,0,0,0.5)] opacity-0 invisible translate-x-full transition-all duration-500 md:hidden z-[115]">
       
-      <div class="mb-12"></div>
+      <button id="menu-close" class="mobile-link self-end mb-10 text-brand-gold/60 hover:text-brand-gold transition-colors">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
 
-      <div class="flex flex-col space-y-9 w-full">
+      <div class="flex flex-col space-y-10 w-full mt-4">
         <a href="/" class="mobile-link group">
             <span class="block text-[11px] font-premium tracking-[0.3em] text-white/90 group-hover:text-brand-gold transition-all uppercase">Inicio</span>
         </a>
@@ -32,22 +34,25 @@
             <span class="block text-[11px] font-premium tracking-[0.3em] text-white/90 group-hover:text-brand-gold transition-all uppercase">Pedidos</span>
         </a>
 
-        <div class="h-[1px] w-full bg-brand-gold/10 my-2"></div>
+        <div class="h-[1px] w-8 bg-brand-gold/30 my-2"></div>
         
         <a href="https://wa.me/51953435738" class="mobile-link">
             <span class="text-[8px] tracking-[0.3em] text-brand-gold uppercase font-bold italic">WhatsApp VIP</span>
         </a>
       </div>
-
-      <button class="mobile-link absolute top-7 right-4 text-brand-gold/40">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M18 6L6 18M6 6l12 12"/></svg>
-      </button>
     </div>
 
   </div>
 </nav>
 
 <style>
+  /* Control de visibilidad del botón hamburguesa */
+  .menu-open #menu-toggle {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* Animación del panel */
   .menu-open #mobile-menu {
     @apply opacity-100 visible translate-x-0;
   }
@@ -63,16 +68,19 @@
 
 <script>
   function setupNavbar() {
-    const btn = document.getElementById('menu-toggle');
+    const btnToggle = document.getElementById('menu-toggle');
+    const btnClose = document.getElementById('menu-close');
     const nav = document.querySelector('nav');
     const links = document.querySelectorAll('.mobile-link');
 
-    if (btn && nav) {
-      btn.onclick = (e) => {
-        e.stopPropagation();
-        nav.classList.toggle('menu-open');
-        document.body.classList.toggle('no-scroll');
-      };
+    const toggleMenu = () => {
+      nav.classList.toggle('menu-open');
+      document.body.classList.toggle('no-scroll');
+    };
+
+    if (btnToggle && btnClose && nav) {
+      btnToggle.onclick = toggleMenu;
+      btnClose.onclick = toggleMenu;
 
       links.forEach(link => {
         link.onclick = () => {
