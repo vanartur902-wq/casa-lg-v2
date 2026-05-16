@@ -1,143 +1,130 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+import Hero from '../components/Hero.astro';
 ---
 
-<MainLayout title="Inicio | Casa L&G Premium">
-  <main class="bg-[#0b0707] min-h-screen text-white overflow-hidden font-sans">
+<MainLayout title="Exclusividad | Casa L&G">
+  <Hero />
+  
+  <main class="bg-[#0b0707] text-white overflow-hidden font-sans relative">
     
-    <section id="hero-main" class="relative h-screen flex flex-col items-center justify-center text-center px-6 transition-all duration-1000">
-      <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_#1f1313_0%,_#0b0707_100%)]"></div>
-      
-      <div class="relative z-10 flex flex-col items-center animate-fade-in-down">
-        <p class="text-[#C5A059] tracking-[0.6em] text-[10px] md:text-[12px] uppercase mb-12 opacity-80 font-light">
-          Estándar de Oro en Detalles
+    <div class="flex flex-col items-center justify-center -mt-20 mb-16 relative z-30 animate-bounce-soft">
+      <span class="text-[9px] uppercase tracking-[0.4em] text-[#C5A059] mb-3 font-light">Explorar Esencia</span>
+      <div class="w-[1px] h-10 bg-gradient-to-b from-[#C5A059] to-transparent"></div>
+    </div>
+
+    <section class="py-20 px-6 max-w-7xl mx-auto relative z-20">
+      <div class="text-center max-w-3xl mx-auto mb-20">
+        <h2 class="font-premium text-3xl md:text-5xl mb-6 tracking-wide uppercase">La esencia de Casa L&G</h2>
+        <p class="text-white/50 text-sm md:text-base leading-relaxed font-light">
+          Una presentación elegante de la marca donde los clientes descubren detalles exclusivos, colecciones especiales y experiencias memorables para cada ocasión.
         </p>
-        
-        <div class="w-32 md:w-48 mb-10 group cursor-pointer transition-transform duration-700 hover:scale-105">
-          <img src="/logo-lg.png" alt="Logo Casa L&G" class="w-full h-auto drop-shadow-[0_0_15px_rgba(197,160,89,0.3)]" />
-        </div>
-
-        <h1 class="font-premium text-5xl md:text-8xl text-white tracking-[0.3em] uppercase leading-none">
-          CASA L&G
-        </h1>
-        
-        <div class="mt-20 flex flex-col items-center animate-bounce opacity-30">
-          <span class="text-[9px] uppercase tracking-[0.4em] text-[#C5A059] mb-4">Explorar Esencia</span>
-          <div class="w-[1px] h-12 bg-gradient-to-b from-[#C5A059] to-transparent"></div>
-        </div>
+        <div class="h-[1px] w-12 bg-[#C5A059]/30 mx-auto mt-8"></div>
       </div>
-    </section>
 
-    <section class="relative z-20 py-24 px-6 max-w-7xl mx-auto">
-      <div id="main-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6 transition-all duration-700">
+      <div id="main-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8 transition-all duration-700">
         
-        <div onclick="openSection('productos')" class="group relative h-[400px] md:h-[600px] cursor-pointer overflow-hidden border border-white/5 transition-all duration-500 hover:border-[#C5A059]/40 bg-[#120c0c]">
-          <img src="http://googleusercontent.com/image_collection/image_retrieval/14264047416667222323" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-110 group-hover:opacity-60 transition-all duration-1000" />
+        <div onclick="openSection('productos')" class="group relative h-[450px] md:h-[550px] cursor-pointer overflow-hidden border border-white/5 transition-all duration-500 hover:border-[#C5A059]/40 bg-[#120c0c]">
+          <img src="https://i.pinimg.com/1200x/11/4a/c7/114ac7e62469500fd0398d1abf25fa58.jpg" class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-105 group-hover:opacity-50 transition-all duration-1000" />
           <div class="absolute inset-0 bg-gradient-to-t from-[#0b0707] via-transparent to-transparent"></div>
           <div class="absolute bottom-10 left-10 text-left">
             <span class="text-[#C5A059] text-[9px] tracking-[0.4em] uppercase mb-2 block">Curaduría</span>
-            <h3 class="font-premium text-3xl text-white tracking-widest uppercase">Productos<br/>Destacados</h3>
+            <h3 class="font-premium text-2xl text-white tracking-widest uppercase">Productos<br/>Destacados</h3>
           </div>
         </div>
 
-        <div onclick="openSection('temporadas')" class="group relative h-[400px] md:h-[600px] cursor-pointer overflow-hidden border border-white/5 transition-all duration-500 hover:border-[#C5A059]/40 bg-[#120c0c]">
-          <img src="http://googleusercontent.com/image_collection/image_retrieval/17465808003144612222" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-110 group-hover:opacity-60 transition-all duration-1000" />
+        <div onclick="openSection('temporadas')" class="group relative h-[450px] md:h-[550px] cursor-pointer overflow-hidden border border-white/5 transition-all duration-500 hover:border-[#C5A059]/40 bg-[#120c0c]">
+          <img src="https://i.pinimg.com/1200x/46/e7/51/46e751b112f4ebe5c69b0574000c2718.jpg" class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-105 group-hover:opacity-50 transition-all duration-1000" />
           <div class="absolute inset-0 bg-gradient-to-t from-[#0b0707] via-transparent to-transparent"></div>
           <div class="absolute bottom-10 left-10 text-left">
-            <span class="text-[#C5A059] text-[9px] tracking-[0.4em] uppercase mb-2 block">Calendario</span>
-            <h3 class="font-premium text-3xl text-white tracking-widest uppercase">Temporadas<br/>Especiales</h3>
+            <span class="text-[#C5A059] text-[9px] tracking-[0.4em] uppercase mb-2 block">Ediciones</span>
+            <h3 class="font-premium text-2xl text-white tracking-widest uppercase">Temporadas<br/>Especiales</h3>
           </div>
         </div>
 
-        <div onclick="openSection('colecciones')" class="group relative h-[400px] md:h-[600px] cursor-pointer overflow-hidden border border-white/5 transition-all duration-500 hover:border-[#C5A059]/40 bg-[#120c0c]">
-          <div class="absolute inset-0 flex items-center justify-center opacity-10 scale-150 font-premium text-white select-none">L&G</div>
-          <div class="absolute inset-0 bg-gradient-to-t from-[#0b0707] via-[#120c0c]/40 to-transparent"></div>
+        <div onclick="openSection('colecciones')" class="group relative h-[450px] md:h-[550px] cursor-pointer overflow-hidden border border-white/5 transition-all duration-500 hover:border-[#C5A059]/40 bg-[#120c0c]">
+          <img src="https://i.pinimg.com/1200x/92/1b/8b/921b8b6b062006c00cb165d2c35844de.jpg" class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-105 group-hover:opacity-50 transition-all duration-1000" />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0b0707] via-transparent to-transparent"></div>
           <div class="absolute bottom-10 left-10 text-left">
-            <span class="text-[#C5A059] text-[9px] tracking-[0.4em] uppercase mb-2 block">Exclusividad</span>
-            <h3 class="font-premium text-3xl text-white tracking-widest uppercase">Nuevas<br/>Colecciones</h3>
+            <span class="text-[#C5A059] text-[9px] tracking-[0.4em] uppercase mb-2 block">Lanzamientos</span>
+            <h3 class="font-premium text-2xl text-white tracking-widest uppercase">Nuevas<br/>Colecciones</h3>
           </div>
         </div>
 
       </div>
 
       <div id="detail-view" class="hidden fixed inset-0 z-[100] bg-[#0b0707] p-6 md:p-20 overflow-y-auto animate-fade-in">
-        <button onclick="closeSection()" class="fixed top-10 right-10 z-[110] text-[#C5A059] uppercase tracking-widest text-[10px] flex items-center gap-4 hover:text-white transition-colors">
+        <button onclick="closeSection()" class="fixed top-10 right-10 z-[110] text-[#C5A059] uppercase tracking-widest text-[10px] flex items-center gap-3 hover:text-white transition-colors bg-black/40 px-4 py-2 rounded-full backdrop-blur-md border border-white/5">
           <i class="fa-solid fa-arrow-left"></i> Regresar al Inicio
         </button>
 
-        <div id="detail-content" class="max-w-6xl mx-auto py-20">
+        <div id="detail-content" class="max-w-6xl mx-auto py-12">
           </div>
       </div>
     </section>
-
-    <section class="py-32 px-6 border-t border-white/5">
-      <div class="max-w-4xl mx-auto text-center">
-        <h2 class="font-premium text-2xl md:text-5xl text-white leading-relaxed tracking-tight mb-8">
-          "La esencia de Casa L&G es elevar lo cotidiano a <span class="italic text-[#C5A059]">un plano de distinción inolvidable."</span>
-        </h2>
-        <p class="text-white/30 font-sans tracking-[0.3em] uppercase text-[10px]">Filosofía de Alta Costura en Detalles</p>
-      </div>
-    </section>
-
   </main>
-</Layout>
+</MainLayout>
 
 <script is:inline>
-  // DATOS PARA LA INTERACTIVIDAD
+  // CONTENIDO DINÁMICO CON LA TEMÁTICA ESTÁNDAR DE ORO
   const sections = {
     productos: {
       title: "Productos Destacados",
-      subtitle: "Piezas Maestras",
+      subtitle: "Piezas de Alta Gama",
       content: `
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <img src="https://i.pinimg.com/1200x/11/4a/c7/114ac7e62469500fd0398d1abf25fa58.jpg" class="w-full h-[500px] object-cover rounded-sm border border-white/10" />
-          <div class="space-y-8">
-            <h2 class="font-premium text-4xl text-white tracking-widest uppercase">Bunny Box Premium</h2>
-            <p class="text-white/60 leading-loose">Nuestra pieza insignia. Una combinación de texturas, aromas y detalles de autor diseñados para dejar un recuerdo eterno. Cada elemento ha sido seleccionado bajo el estándar de oro.</p>
-            <div class="grid grid-cols-2 gap-4 text-[10px] uppercase tracking-widest text-[#C5A059]">
-              <div class="p-4 border border-white/5">Grabado de Precisión</div>
-              <div class="p-4 border border-white/5">Materiales Nobles</div>
-            </div>
-            <a href="https://wa.me/51953435738" class="inline-block py-5 px-12 bg-white text-black text-[10px] font-bold uppercase tracking-widest">Solicitar Info</a>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 mt-12">
+          <div class="group bg-white/[0.01] border border-white/5 p-6 rounded-2xl">
+            <div class="overflow-hidden mb-6 aspect-square"><img src="https://i.pinimg.com/1200x/92/1b/8b/921b8b6b062006c00cb165d2c35844de.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" /></div>
+            <span class="text-[#C5A059] text-[9px] tracking-widest uppercase mb-1 block">Detalle Día Del Padre</span>
+            <h4 class="font-premium text-xl text-white mb-2">Caja Sorpresa</h4>
+            <span class="text-white/60 font-medium">S/150.00</span>
+          </div>
+          <div class="group bg-white/[0.01] border border-white/5 p-6 rounded-2xl">
+            <div class="overflow-hidden mb-6 aspect-square"><img src="https://i.pinimg.com/1200x/46/e7/51/46e751b112f4ebe5c69b0574000c2718.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" /></div>
+            <span class="text-[#C5A059] text-[9px] tracking-widest uppercase mb-1 block">Gifts VIP</span>
+            <h4 class="font-premium text-xl text-white mb-2">Caja Oro</h4>
+            <span class="text-white/60 font-medium">S/125.00</span>
+          </div>
+          <div class="group bg-white/[0.01] border border-white/5 p-6 rounded-2xl">
+            <div class="overflow-hidden mb-6 aspect-square"><img src="https://i.pinimg.com/1200x/11/4a/c7/114ac7e62469500fd0398d1abf25fa58.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" /></div>
+            <span class="text-[#C5A059] text-[9px] tracking-widest uppercase mb-1 block">Regalos Bunny Box</span>
+            <h4 class="font-premium text-xl text-white mb-2">Bunny Box Premium</h4>
+            <span class="text-white/60 font-medium">S/310.00</span>
           </div>
         </div>
       `
     },
     temporadas: {
       title: "Temporadas Especiales",
-      subtitle: "El Calendario del Lujo",
+      subtitle: "Celebraciones Exclusivas",
       content: `
-        <div class="space-y-20">
-          <div class="text-center max-w-2xl mx-auto">
-             <h2 class="font-premium text-5xl text-white mb-6 uppercase tracking-widest">Día del Padre</h2>
-             <p class="text-white/50 italic">"Honor y Legado". Nuestra colección exclusiva para celebrar la figura paterna con sobriedad y elegancia.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mt-12">
+          <div class="space-y-6">
+            <span class="text-[#C5A059] text-[10px] tracking-[0.3em] uppercase block">Línea Temporal Autor</span>
+            <h3 class="font-premium text-3xl md:text-5xl text-white uppercase tracking-wide">Momentos Eternos</h3>
+            <p class="text-white/50 font-light leading-relaxed">Diseñamos colecciones efímeras y adaptadas a las festividades más importantes del año. Piezas por tiempo limitado con empaques temáticos estructurales únicos.</p>
+            <div class="h-[1px] w-20 bg-[#C5A059]/40 py-2"></div>
+            <p class="text-[#C5A059] text-xs uppercase tracking-widest"><i class="fa-solid fa-calendar-days mr-2"></i> Próxima Edición: San Valentín & Eventos Corporativos</p>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="aspect-[3/4] bg-white/5 border border-white/10 flex flex-col justify-end p-8">
-              <span class="text-[#C5A059] text-[9px] tracking-widest mb-2 uppercase">Línea Executive</span>
-              <h4 class="font-premium text-xl uppercase">Caja Oro</h4>
-            </div>
-            <div class="aspect-[3/4] bg-white/5 border border-white/10 flex flex-col justify-end p-8">
-              <span class="text-[#C5A059] text-[9px] tracking-widest mb-2 uppercase">Línea Herencia</span>
-              <h4 class="font-premium text-xl uppercase">Cofre de Autor</h4>
-            </div>
-            <div class="aspect-[3/4] bg-white/5 border border-white/10 flex flex-col justify-end p-8">
-              <span class="text-[#C5A059] text-[9px] tracking-widest mb-2 uppercase">Línea Wine VIP</span>
-              <h4 class="font-premium text-xl uppercase">Cata Privada</h4>
-            </div>
+          <div class="h-[400px] border border-white/10 overflow-hidden">
+            <img src="https://i.pinimg.com/1200x/46/e7/51/46e751b112f4ebe5c69b0574000c2718.jpg" class="w-full h-full object-cover" />
           </div>
         </div>
       `
     },
     colecciones: {
       title: "Nuevas Colecciones",
-      subtitle: "Ediciones Limitadas",
+      subtitle: "Lanzamientos de Reserva",
       content: `
-        <div class="flex flex-col items-center text-center py-20">
-           <span class="text-[#C5A059] tracking-[1em] uppercase text-xs mb-10">Próximamente</span>
-           <h2 class="font-premium text-6xl md:text-9xl text-white/10 uppercase select-none">HERENCIA</h2>
-           <p class="max-w-xl text-white/40 mt-10 leading-relaxed tracking-wide">Una colección que explora la fusión entre la artesanía milenaria y el diseño contemporáneo. Disponibilidad exclusiva bajo lista de reserva.</p>
-           <div class="mt-20 h-[1px] w-40 bg-[#C5A059]"></div>
+        <div class="flex flex-col items-center text-center py-12 max-w-2xl mx-auto">
+          <div class="w-20 h-20 border border-[#C5A059]/20 flex items-center justify-center rounded-full mb-8 text-[#C5A059]">
+            <i class="fa-solid fa-gem text-2xl"></i>
+          </div>
+          <h3 class="font-premium text-4xl text-white mb-6 uppercase tracking-wider">Línea Prestige Limitada</h3>
+          <p class="text-white/40 font-light leading-relaxed mb-8">
+            Acceda a nuestros últimos diseños estructurales en cajas y cofres de cuero y acabados metálicos de precisión láser. Disponibles únicamente bajo pedido anticipado y reserva selecta.
+          </p>
+          <a href="https://wa.me/51953435738" target="_blank" class="px-10 py-4 bg-transparent border border-[#C5A059] text-[#C5A059] uppercase tracking-widest text-[10px] font-bold hover:bg-[#C5A059] hover:text-black transition-all">Consultar Disponibilidad</a>
         </div>
       `
     }
@@ -147,46 +134,48 @@ import MainLayout from '../layouts/MainLayout.astro';
     const data = sections[key];
     const detailView = document.getElementById('detail-view');
     const content = document.getElementById('detail-content');
-    const hero = document.getElementById('hero-main');
     
     content.innerHTML = `
-      <div class="mb-16 animate-slide-up">
-        <span class="text-[#C5A059] tracking-[0.5em] uppercase text-[11px] mb-4 block">${data.subtitle}</span>
-        <h1 class="font-premium text-5xl md:text-7xl text-white uppercase tracking-widest">${data.title}</h1>
+      <div class="mb-12 animate-slide-up">
+        <span class="text-[#C5A059] tracking-[0.5em] uppercase text-[10px] mb-2 block">${data.subtitle}</span>
+        <h1 class="font-premium text-4xl md:text-6xl text-white uppercase tracking-widest">${data.title}</h1>
+        <div class="h-[1px] w-16 bg-[#C5A059]/30 mt-6"></div>
       </div>
-      <div class="animate-fade-in [animation-delay:400ms]">
+      <div class="animate-fade-in [animation-delay:300ms]">
         ${data.content}
       </div>
     `;
     
     detailView.classList.remove('hidden');
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden'; // Detiene el scroll del fondo
   }
 
   function closeSection() {
     const detailView = document.getElementById('detail-view');
     detailView.classList.add('hidden');
-    document.body.style.overflow = 'auto';
+    document.body.style.overflow = 'auto'; // Devuelve el scroll
   }
 </script>
 
 <style>
   .font-premium { font-family: 'Cinzel', serif; }
   
-  @keyframes fade-in-down {
-    from { opacity: 0; transform: translateY(-30px); }
-    to { opacity: 1; transform: translateY(0); }
+  /* Animación personalizada de rebote suave (arriba y abajo ligeramente) */
+  @keyframes bounce-soft {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
   }
+  
   @keyframes fade-in {
     from { opacity: 0; }
     to { opacity: 1; }
   }
   @keyframes slide-up {
-    from { opacity: 0; transform: translateY(50px); }
+    from { opacity: 0; transform: translateY(40px); }
     to { opacity: 1; transform: translateY(0); }
   }
   
-  .animate-fade-in-down { animation: fade-in-down 1.2s ease-out forwards; }
-  .animate-fade-in { animation: fade-in 1s ease-out forwards; }
-  .animate-slide-up { animation: slide-up 1s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+  .animate-bounce-soft { animation: bounce-soft 3s ease-in-out infinite; }
+  .animate-fade-in { animation: fade-in 0.8s ease-out forwards; }
+  .animate-slide-up { animation: slide-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
 </style>
