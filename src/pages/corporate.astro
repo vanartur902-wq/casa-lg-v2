@@ -6,37 +6,40 @@ import Navbar from '../components/Navbar.astro';
 <Layout title="Soluciones Corporate | Casa L&G">
   <Navbar />
   
-  <main class="relative min-h-screen bg-luxury-dark text-white pt-32 overflow-hidden flex flex-col justify-center items-center px-6">
-    <div class="absolute inset-0 z-0">
-      <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-brand-dark/50 to-luxury-dark z-10"></div>
-    </div>
+  <section class="relative min-h-screen bg-black text-white flex items-center justify-center overflow-hidden pt-20">
+    <div class="absolute inset-0 z-0 bg-gradient-to-b from-black via-[#120c0c] to-black"></div>
 
-    <div class="relative z-20 text-center max-w-3xl mx-auto flex flex-col items-center">
-      <p class="font-sans text-brand-gold tracking-[0.5em] text-[9px] md:text-[11px] uppercase mb-4">
+    <div class="relative z-20 text-center px-6 flex flex-col items-center max-w-3xl mx-auto">
+      <p class="font-sans text-brand-gold tracking-[0.4em] text-[10px] md:text-[12px] uppercase mb-6">
         Regalos de Identidad Corporativa
       </p>
       
       <h1 class="font-premium text-4xl md:text-7xl text-white mb-8 tracking-wide uppercase leading-tight">
-        Alianzas de <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-brand-gold to-white">Alto Nivel</span>
+        Alianzas de <br/>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-[#C5A059] to-white">
+          Alto Nivel
+        </span>
       </h1>
       
-      <div class="h-[1px] w-16 bg-brand-gold/40 mb-8"></div>
+      <div class="h-[1px] w-20 bg-[#C5A059]/40 mb-8"></div>
       
-      <p class="font-body text-white/70 text-sm md:text-base leading-relaxed tracking-wide mb-12 max-w-xl">
+      <p class="font-sans text-white/70 text-sm md:text-base leading-relaxed tracking-wide mb-12 max-w-xl">
         Elevamos la identidad de tu empresa mediante detalles corporativos sofisticados y personalizados. El regalo ideal para ejecutivos, clientes exclusivos y eventos institucionales que exigen el estándar más alto.
       </p>
 
-      <div>
-        <a href="https://wa.me/51953435738" class="group relative inline-flex items-center justify-center px-10 py-4 border border-brand-gold overflow-hidden transition-all duration-500 hover:bg-brand-gold">
-          <span class="relative z-10 font-sans text-[10px] tracking-widest text-brand-gold group-hover:text-black uppercase transition-colors">
+      <div class="flex justify-center">
+        <a href="https://wa.me/51953435738" target="_blank" rel="noopener noreferrer" class="group relative inline-flex items-center justify-center px-12 py-4 border border-[#C5A059] overflow-hidden transition-all duration-500 hover:bg-[#C5A059]">
+          <span class="relative z-10 font-sans text-[10px] tracking-widest text-[#C5A059] group-hover:text-black uppercase transition-colors">
             Contactar Consultor Corporate
           </span>
         </a>
       </div>
     </div>
-  </main>
+  </section>
 </Layout>
 
 <style>
-  .font-premium { font-family: 'Cinzel', serif; }
+  .font-premium {
+    font-family: 'Cinzel', serif;
+  }
 </style>
