@@ -3,7 +3,7 @@ import MainLayout from '../layouts/MainLayout.astro';
 import Hero from '../components/Hero.astro';
 ---
 
-<MainLayout title="Inicio | Casa L&G">
+<MainLayout title="Exclusividad | Casa L&G">
   <Hero />
   
   <main class="bg-[#0b0707] text-white overflow-hidden font-sans relative">
@@ -25,7 +25,7 @@ import Hero from '../components/Hero.astro';
       <div id="main-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8 transition-all duration-700">
         
         <div onclick="openSection('productos')" class="group relative h-[450px] md:h-[550px] cursor-pointer overflow-hidden border border-white/5 transition-all duration-500 hover:border-[#C5A059]/40 bg-[#120c0c]">
-          <img src="https://i.pinimg.com/1200x/11/4a/c7/114ac7e62469500fd0398d1abf25fa58.jpg" class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-105 group-hover:opacity-50 transition-all duration-1000" alt="Productos Destacados" />
+          <img src="https://i.pinimg.com/1200x/11/4a/c7/114ac7e62469500fd0398d1abf25fa58.jpg" class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-105 group-hover:opacity-50 transition-all duration-1000" />
           <div class="absolute inset-0 bg-gradient-to-t from-[#0b0707] via-transparent to-transparent"></div>
           <div class="absolute bottom-10 left-10 text-left">
             <span class="text-[#C5A059] text-[9px] tracking-[0.4em] uppercase mb-2 block">Curaduría</span>
@@ -34,7 +34,7 @@ import Hero from '../components/Hero.astro';
         </div>
 
         <div onclick="openSection('temporadas')" class="group relative h-[450px] md:h-[550px] cursor-pointer overflow-hidden border border-white/5 transition-all duration-500 hover:border-[#C5A059]/40 bg-[#120c0c]">
-          <img src="https://i.pinimg.com/1200x/46/e7/51/46e751b112f4ebe5c69b0574000c2718.jpg" class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-105 group-hover:opacity-50 transition-all duration-1000" alt="Temporadas Especiales" />
+          <img src="https://i.pinimg.com/1200x/46/e7/51/46e751b112f4ebe5c69b0574000c2718.jpg" class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-105 group-hover:opacity-50 transition-all duration-1000" />
           <div class="absolute inset-0 bg-gradient-to-t from-[#0b0707] via-transparent to-transparent"></div>
           <div class="absolute bottom-10 left-10 text-left">
             <span class="text-[#C5A059] text-[9px] tracking-[0.4em] uppercase mb-2 block">Ediciones</span>
@@ -43,7 +43,7 @@ import Hero from '../components/Hero.astro';
         </div>
 
         <div onclick="openSection('colecciones')" class="group relative h-[450px] md:h-[550px] cursor-pointer overflow-hidden border border-white/5 transition-all duration-500 hover:border-[#C5A059]/40 bg-[#120c0c]">
-          <img src="https://i.pinimg.com/1200x/92/1b/8b/921b8b6b062006c00cb165d2c35844de.jpg" class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-105 group-hover:opacity-50 transition-all duration-1000" alt="Nuevas Colecciones" />
+          <img src="https://i.pinimg.com/1200x/92/1b/8b/921b8b6b062006c00cb165d2c35844de.jpg" class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-105 group-hover:opacity-50 transition-all duration-1000" />
           <div class="absolute inset-0 bg-gradient-to-t from-[#0b0707] via-transparent to-transparent"></div>
           <div class="absolute bottom-10 left-10 text-left">
             <span class="text-[#C5A059] text-[9px] tracking-[0.4em] uppercase mb-2 block">Lanzamientos</span>
@@ -53,18 +53,17 @@ import Hero from '../components/Hero.astro';
 
       </div>
 
-      <div id="detail-view" class="hidden fixed inset-0 z-[100] bg-[#0b0707] p-6 md:p-20 overflow-y-auto animate-fade-in transition-all duration-500">
-        
-        <button onclick="closeSection()" class="fixed top-8 right-8 md:top-12 md:right-12 z-[110] text-[#C5A059] uppercase tracking-widest text-[10px] flex items-center gap-3 hover:text-white transition-colors bg-black/40 px-5 py-3 rounded-full backdrop-blur-md border border-white/5 group">
-          <i class="fa-solid fa-arrow-left text-sm group-hover:-translate-x-1 transition-transform"></i> Regresar
+      <div id="detail-view" class="hidden fixed inset-0 z-[100] bg-[#0b0707] p-6 md:p-20 overflow-y-auto animate-fade-in">
+        <button onclick="closeSection()" class="fixed top-10 right-10 z-[110] text-[#C5A059] uppercase tracking-widest text-[10px] flex items-center gap-3 hover:text-white transition-colors bg-black/40 px-4 py-3 rounded-full backdrop-blur-md border border-white/5">
+          <i class="fa-solid fa-xmark text-sm"></i> Cerrar Apartado
         </button>
 
         <div id="detail-content" class="max-w-6xl mx-auto py-12">
-          </div>
+        </div>
       </div>
     </section>
   </main>
-</Layout>
+</MainLayout>
 
 <script is:inline>
   // CONTENIDO DINÁMICO CON LA TEMÁTICA ESTÁNDAR DE ORO
@@ -73,21 +72,21 @@ import Hero from '../components/Hero.astro';
       title: "Productos Destacados",
       subtitle: "Piezas de Alta Gama",
       content: `
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 mt-24 md:mt-12">
-          <div class="group bg-white/[0.01] border border-white/5 p-6 rounded-2xl transition-all duration-300 hover:border-[#C5A059]/20">
-            <div class="overflow-hidden mb-6 aspect-square rounded-lg border border-white/5"><img src="https://i.pinimg.com/1200x/92/1b/8b/921b8b6b062006c00cb165d2c35844de.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Caja Sorpresa" /></div>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 mt-12">
+          <div class="group bg-white/[0.01] border border-white/5 p-6 rounded-2xl">
+            <div class="overflow-hidden mb-6 aspect-square"><img src="https://i.pinimg.com/1200x/92/1b/8b/921b8b6b062006c00cb165d2c35844de.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" /></div>
             <span class="text-[#C5A059] text-[9px] tracking-widest uppercase mb-1 block">Detalle Día Del Padre</span>
             <h4 class="font-premium text-xl text-white mb-2">Caja Sorpresa</h4>
             <span class="text-white/60 font-medium">S/150.00</span>
           </div>
-          <div class="group bg-white/[0.01] border border-white/5 p-6 rounded-2xl transition-all duration-300 hover:border-[#C5A059]/20">
-            <div class="overflow-hidden mb-6 aspect-square rounded-lg border border-white/5"><img src="https://i.pinimg.com/1200x/46/e7/51/46e751b112f4ebe5c69b0574000c2718.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Caja Oro" /></div>
+          <div class="group bg-white/[0.01] border border-white/5 p-6 rounded-2xl">
+            <div class="overflow-hidden mb-6 aspect-square"><img src="https://i.pinimg.com/1200x/46/e7/51/46e751b112f4ebe5c69b0574000c2718.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" /></div>
             <span class="text-[#C5A059] text-[9px] tracking-widest uppercase mb-1 block">Gifts VIP</span>
             <h4 class="font-premium text-xl text-white mb-2">Caja Oro</h4>
             <span class="text-white/60 font-medium">S/125.00</span>
           </div>
-          <div class="group bg-white/[0.01] border border-white/5 p-6 rounded-2xl transition-all duration-300 hover:border-[#C5A059]/20">
-            <div class="overflow-hidden mb-6 aspect-square rounded-lg border border-white/5"><img src="https://i.pinimg.com/1200x/11/4a/c7/114ac7e62469500fd0398d1abf25fa58.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Bunny Box Premium" /></div>
+          <div class="group bg-white/[0.01] border border-white/5 p-6 rounded-2xl">
+            <div class="overflow-hidden mb-6 aspect-square"><img src="https://i.pinimg.com/1200x/11/4a/c7/114ac7e62469500fd0398d1abf25fa58.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" /></div>
             <span class="text-[#C5A059] text-[9px] tracking-widest uppercase mb-1 block">Regalos Bunny Box</span>
             <h4 class="font-premium text-xl text-white mb-2">Bunny Box Premium</h4>
             <span class="text-white/60 font-medium">S/310.00</span>
@@ -99,7 +98,7 @@ import Hero from '../components/Hero.astro';
       title: "Temporadas Especiales",
       subtitle: "Celebraciones Exclusivas",
       content: `
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mt-24 md:mt-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mt-12">
           <div class="space-y-6">
             <span class="text-[#C5A059] text-[10px] tracking-[0.3em] uppercase block">Línea Temporal Autor</span>
             <h3 class="font-premium text-3xl md:text-5xl text-white uppercase tracking-wide">Momentos Eternos</h3>
@@ -107,8 +106,8 @@ import Hero from '../components/Hero.astro';
             <div class="h-[1px] w-20 bg-[#C5A059]/40 py-2"></div>
             <p class="text-[#C5A059] text-xs uppercase tracking-widest"><i class="fa-solid fa-calendar-days mr-2"></i> Próxima Edición: San Valentín & Eventos Corporativos</p>
           </div>
-          <div class="h-[400px] border border-white/10 overflow-hidden rounded-lg">
-            <img src="https://i.pinimg.com/1200x/46/e7/51/46e751b112f4ebe5c69b0574000c2718.jpg" class="w-full h-full object-cover" alt="Temporadas" />
+          <div class="h-[400px] border border-white/10 overflow-hidden">
+            <img src="https://i.pinimg.com/1200x/46/e7/51/46e751b112f4ebe5c69b0574000c2718.jpg" class="w-full h-full object-cover" />
           </div>
         </div>
       `
@@ -117,8 +116,8 @@ import Hero from '../components/Hero.astro';
       title: "Nuevas Colecciones",
       subtitle: "Lanzamientos de Reserva",
       content: `
-        <div class="flex flex-col items-center text-center py-12 max-w-2xl mx-auto mt-24 md:mt-0">
-          <div class="w-20 h-20 border border-[#C5A059]/20 flex items-center justify-center rounded-full mb-8 text-[#C5A059] bg-white/[0.01]">
+        <div class="flex flex-col items-center text-center py-12 max-w-2xl mx-auto">
+          <div class="w-20 h-20 border border-[#C5A059]/20 flex items-center justify-center rounded-full mb-8 text-[#C5A059]">
             <i class="fa-solid fa-gem text-2xl"></i>
           </div>
           <h3 class="font-premium text-4xl text-white mb-6 uppercase tracking-wider">Línea Prestige Limitada</h3>
@@ -136,11 +135,10 @@ import Hero from '../components/Hero.astro';
     const detailView = document.getElementById('detail-view');
     const content = document.getElementById('detail-content');
     
-    // AJUSTE DE CLASES CSS EN JAVASCRIPT PARA MOBILE (mt-12 para subtitulo en mobile)
     content.innerHTML = `
-      <div class="mb-12 mt-12 md:mt-0 animate-slide-up">
+      <div class="mb-12 animate-slide-up">
         <span class="text-[#C5A059] tracking-[0.5em] uppercase text-[10px] mb-2 block">${data.subtitle}</span>
-        <h1 class="font-premium text-4xl md:text-6xl text-white uppercase tracking-widest leading-tight">${data.title}</h1>
+        <h1 class="font-premium text-4xl md:text-6xl text-white uppercase tracking-widest">${data.title}</h1>
         <div class="h-[1px] w-16 bg-[#C5A059]/30 mt-6"></div>
       </div>
       <div class="animate-fade-in [animation-delay:300ms]">
@@ -149,13 +147,13 @@ import Hero from '../components/Hero.astro';
     `;
     
     detailView.classList.remove('hidden');
-    document.body.style.overflow = 'hidden'; // Detiene el scroll del fondo
+    document.body.style.overflow = 'hidden'; 
   }
 
   function closeSection() {
     const detailView = document.getElementById('detail-view');
     detailView.classList.add('hidden');
-    document.body.style.overflow = 'auto'; // Devuelve el scroll
+    document.body.style.overflow = 'auto'; 
   }
 </script>
 
