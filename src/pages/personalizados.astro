@@ -2,43 +2,102 @@
 import MainLayout from '../layouts/MainLayout.astro';
 ---
 
-<MainLayout title="Personalizados | Piezas de Autor">
-  <main class="relative min-h-screen flex items-center justify-center px-6" style="background-color: #080808;">
+<MainLayout title="Personalización de Autor | Casa L&G">
+  <main class="bg-[#0b0707] text-white min-h-screen">
     
-    <div class="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+    <section class="relative min-h-[80vh] flex items-center justify-center overflow-hidden px-6 pt-24">
+      <div class="absolute inset-0 z-0">
+         <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-[#0b0707] z-10"></div>
+         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#C5A059] opacity-[0.03] blur-[150px] rounded-full"></div>
+      </div>
       
-      <div class="order-2 lg:order-1">
-        <span class="text-[#C5A059] font-sans text-[11px] uppercase tracking-[0.5em] block mb-6">Custom Masterpieces</span>
-        <h1 class="font-premium text-5xl md:text-7xl text-white mb-8 leading-tight">
-          CREADO POR <br/> <span class="italic text-white/40">USTED</span>,<br/> FORJADO POR <span class="text-[#C5A059]">NOSOTROS</span>
+      <div class="relative z-20 text-center max-w-4xl mx-auto">
+        <p class="font-sans text-[#C5A059] tracking-[0.7em] text-[10px] md:text-[12px] uppercase mb-6 animate-slide-up">
+            Usted lo imagina, Nosotros lo forjamos
+        </p>
+        <h1 class="font-premium text-5xl md:text-8xl text-white mb-8 tracking-tighter leading-none animate-fade-in opacity-0 [animation-fill-mode:forwards] [animation-delay:200ms]">
+          PIEZAS DE <br/>
+          <span class="italic text-transparent bg-clip-text bg-gradient-to-r from-white via-[#C5A059] to-white">
+            Autor Único
+          </span>
         </h1>
+        <p class="font-sans text-white/50 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-12 font-light animate-fade-in opacity-0 [animation-fill-mode:forwards] [animation-delay:400ms]">
+          Transforme un detalle en un legado. Seleccione cada elemento de su obsequio bajo la guía de nuestros expertos artesanos.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-20 px-6 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
         
-        <div class="space-y-6 mb-12">
-            <p class="text-white/70 font-sans text-sm md:text-base leading-relaxed border-b border-white/5 pb-6">
-                Seleccione entre los materiales más finos del mundo y grabe su legado. Cada pieza personalizada es una historia contada a través del tacto.
-            </p>
-            <ul class="text-[#C5A059] font-sans text-[10px] tracking-[0.2em] uppercase space-y-3">
-                <li>• Monogramas de precisión láser</li>
-                <li>• Selección de pieles y maderas exóticas</li>
-                <li>• Consultoría de diseño 1 a 1</li>
-            </ul>
+        <div class="group relative bg-white/[0.01] border border-white/5 p-12 rounded-2xl transition-all duration-500 hover:border-[#C5A059]/40 hover:bg-white/[0.03]">
+          <span class="text-[#C5A059]/30 font-premium text-5xl absolute top-6 right-8 group-hover:text-[#C5A059] transition-colors">01</span>
+          <div class="mb-6 text-[#C5A059]"><i class="fa-solid fa-palette text-3xl"></i></div>
+          <h3 class="font-premium text-2xl mb-4 text-white">Colores & Temática</h3>
+          <p class="text-white/40 text-sm leading-relaxed">Defina la paleta cromática y el concepto visual que mejor represente su intención o la personalidad del agasajado.</p>
         </div>
 
-        <a href="https://wa.me/51953435738" target="_blank" class="inline-block py-5 px-12 bg-white text-black font-sans text-[11px] font-bold uppercase tracking-widest transition-all hover:bg-[#C5A059] hover:text-black">
-          Iniciar Proyecto Personalizado
+        <div class="group relative bg-white/[0.01] border border-white/5 p-12 rounded-2xl transition-all duration-500 hover:border-[#C5A059]/40 hover:bg-white/[0.03]">
+          <span class="text-[#C5A059]/30 font-premium text-5xl absolute top-6 right-8 group-hover:text-[#C5A059] transition-colors">02</span>
+          <div class="mb-6 text-[#C5A059]"><i class="fa-solid fa-pen-nib text-3xl"></i></div>
+          <h3 class="font-premium text-2xl mb-4 text-white">Mensajes Eternos</h3>
+          <p class="text-white/40 text-sm leading-relaxed">Caligrafía artística o grabados de precisión. Sus palabras, inmortales en el material más fino.</p>
+        </div>
+
+        <div class="group relative bg-white/[0.01] border border-white/5 p-12 rounded-2xl transition-all duration-500 hover:border-[#C5A059]/40 hover:bg-white/[0.03]">
+          <span class="text-[#C5A059]/30 font-premium text-5xl absolute top-6 right-8 group-hover:text-[#C5A059] transition-colors">03</span>
+          <div class="mb-6 text-[#C5A059]"><i class="fa-solid fa-box-open text-3xl"></i></div>
+          <h3 class="font-premium text-2xl mb-4 text-white">Caja de Autor</h3>
+          <p class="text-white/40 text-sm leading-relaxed">Diseñamos el empaque desde cero: estructuras especiales, forros de seda o maderas exóticas.</p>
+        </div>
+
+        <div class="group relative bg-white/[0.01] border border-white/5 p-12 rounded-2xl transition-all duration-500 hover:border-[#C5A059]/40 hover:bg-white/[0.03]">
+          <span class="text-[#C5A059]/30 font-premium text-5xl absolute top-6 right-8 group-hover:text-[#C5A059] transition-colors">04</span>
+          <div class="mb-6 text-[#C5A059]"><i class="fa-solid fa-list-check text-3xl"></i></div>
+          <h3 class="font-premium text-2xl mb-4 text-white">Selección Curada</h3>
+          <p class="text-white/40 text-sm leading-relaxed">Elija entre nuestra reserva exclusiva de productos para armar una combinación armoniosa y única.</p>
+        </div>
+
+        <div class="group relative bg-white/[0.01] border border-white/5 p-12 rounded-2xl transition-all duration-500 hover:border-[#C5A059]/40 hover:bg-white/[0.03]">
+          <span class="text-[#C5A059]/30 font-premium text-5xl absolute top-6 right-8 group-hover:text-[#C5A059] transition-colors">05</span>
+          <div class="mb-6 text-[#C5A059]"><i class="fa-solid fa-building-shield text-3xl"></i></div>
+          <h3 class="font-premium text-2xl mb-4 text-white">Branding de Élite</h3>
+          <p class="text-white/40 text-sm leading-relaxed">Personalización corporativa de alta fidelidad que respeta y eleva la identidad de su institución.</p>
+        </div>
+
+        <div class="group relative bg-white/[0.01] border border-white/5 p-12 rounded-2xl transition-all duration-500 hover:border-[#C5A059]/40 hover:bg-white/[0.03]">
+          <span class="text-[#C5A059]/30 font-premium text-5xl absolute top-6 right-8 group-hover:text-[#C5A059] transition-colors">06</span>
+          <div class="mb-6 text-[#C5A059]"><i class="fa-solid fa-crown text-3xl"></i></div>
+          <h3 class="font-premium text-2xl mb-4 text-white">Ediciones de Reserva</h3>
+          <p class="text-white/40 text-sm leading-relaxed">Acceso a materiales y productos de edición limitada disponibles solo para proyectos de co-creación.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="py-24 text-center px-6">
+      <div class="max-w-2xl mx-auto border-t border-white/10 pt-16">
+        <h2 class="font-premium text-3xl md:text-5xl mb-8">¿Damos vida a su idea?</h2>
+        <p class="text-white/50 mb-12 font-sans tracking-wide">Inicie una consulta privada con nuestro diseñador senior para su proyecto especial.</p>
+        <a href="https://wa.me/51953435738" target="_blank" class="inline-block px-14 py-5 bg-white text-black font-sans font-bold uppercase tracking-[0.3em] transition-all hover:bg-[#C5A059] hover:text-white shadow-2xl">
+          Comenzar Mi Creación
         </a>
       </div>
+    </section>
 
-      <div class="order-1 lg:order-2 relative group">
-        <div class="absolute inset-0 bg-[#C5A059]/10 blur-[60px] rounded-full scale-75 group-hover:scale-100 transition-transform duration-700"></div>
-        <div class="relative aspect-square border border-white/10 flex items-center justify-center p-10 bg-white/[0.01] backdrop-blur-3xl overflow-hidden">
-            <svg class="w-32 h-32 text-[#C5A059]/20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
-            <div class="absolute bottom-10 left-10 text-left">
-                <span class="block text-white/20 font-premium text-6xl select-none">L&G</span>
-            </div>
-        </div>
-      </div>
-
-    </div>
   </main>
 </Layout>
+
+<style>
+  @keyframes slide-up {
+    from { transform: translateY(40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  .animate-slide-up { animation: slide-up 1.2s cubic-bezier(0.22, 1, 0.36, 1); }
+  .animate-fade-in { animation: fade-in 1.8s ease-out forwards; }
+  .font-premium { font-family: 'Cinzel', serif; }
+</style>
