@@ -9,10 +9,13 @@
       <span class="text-[8px] uppercase tracking-[0.5em] text-brand-gold mt-1 italic">Detalles que expresan lo que sientes</span>
     </div>
     
-    <div class="hidden md:flex absolute left-1/2 -translate-x-1/2 space-x-12 font-body text-[10px] uppercase tracking-[0.2em] z-[105]">
+    <div class="hidden md:flex absolute left-1/2 -translate-x-1/2 space-x-12 font-body text-[10px] uppercase tracking-[0.2em] z-[105] whitespace-nowrap">
       <a href="/" class="text-white/80 hover:text-brand-gold transition-colors duration-300">Inicio</a>
-      <a href="/catalogo" class="text-white/80 hover:text-brand-gold transition-colors duration-300">Catálogo</a>
-      <a href="/contacto" class="text-white/80 hover:text-brand-gold transition-colors duration-300">Pedidos</a>
+      <a href="/colecciones" class="text-white/80 hover:text-brand-gold transition-colors duration-300">Colecciones</a>
+      <a href="/experiencias" class="text-white/80 hover:text-brand-gold transition-colors duration-300">Experiencias</a>
+      <a href="/corporate" class="text-white/80 hover:text-brand-gold transition-colors duration-300">Corporate</a>
+      <a href="/personalizados" class="text-white/80 hover:text-brand-gold transition-colors duration-300">Personalizados</a>
+      <a href="/contacto" class="text-white/80 hover:text-brand-gold transition-colors duration-300">Contacto</a>
     </div>
 
     <button id="menu-toggle" class="md:hidden z-[120] p-2 focus:outline-none pr-0 transition-opacity duration-300" aria-label="Abrir menú">
@@ -21,22 +24,32 @@
       </svg>
     </button>
 
-    <div id="mobile-menu" class="fixed top-0 right-0 h-screen w-[35vw] bg-black/90 backdrop-blur-2xl border-l border-brand-gold/20 flex flex-col items-start pt-12 px-6 shadow-[-10px_0_30px_rgba(0,0,0,0.5)] opacity-0 invisible translate-x-full transition-all duration-500 md:hidden z-[115]">
+    <div id="mobile-menu" class="fixed top-0 right-0 h-screen w-[45vw] md:w-[35vw] bg-black/90 backdrop-blur-2xl border-l border-brand-gold/20 flex flex-col items-start pt-12 px-6 shadow-[-10px_0_30px_rgba(0,0,0,0.5)] opacity-0 invisible translate-x-full transition-all duration-500 md:hidden z-[115]">
       
       <button id="menu-close" class="mobile-link self-end mb-10 text-brand-gold/60 hover:text-brand-gold transition-colors">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M18 6L6 18M6 6l12 12"/></svg>
       </button>
 
-      <div class="flex flex-col space-y-10 w-full mt-4">
+      <div class="flex flex-col space-y-8 w-full mt-4 overflow-y-auto max-h-[70vh]">
         <a href="/" class="mobile-link group">
             <span class="block text-[11px] font-premium tracking-[0.3em] text-white/90 group-hover:text-brand-gold transition-all uppercase">Inicio</span>
         </a>
-        <a href="/catalogo" class="mobile-link group">
-            <span class="block text-[11px] font-premium tracking-[0.3em] text-white/90 group-hover:text-brand-gold transition-all uppercase">Catálogo</span>
+        <a href="/colecciones" class="mobile-link group">
+            <span class="block text-[11px] font-premium tracking-[0.3em] text-white/90 group-hover:text-brand-gold transition-all uppercase">Colecciones</span>
+        </a>
+        <a href="/experiencias" class="mobile-link group">
+            <span class="block text-[11px] font-premium tracking-[0.3em] text-white/90 group-hover:text-brand-gold transition-all uppercase">Experiencias</span>
+        </a>
+        <a href="/corporate" class="mobile-link group">
+            <span class="block text-[11px] font-premium tracking-[0.3em] text-white/90 group-hover:text-brand-gold transition-all uppercase">Corporate</span>
+        </a>
+        <a href="/personalizados" class="mobile-link group">
+            <span class="block text-[11px] font-premium tracking-[0.3em] text-white/90 group-hover:text-brand-gold transition-all uppercase">Personalizados</span>
         </a>
         <a href="/contacto" class="mobile-link group">
-            <span class="block text-[11px] font-premium tracking-[0.3em] text-white/90 group-hover:text-brand-gold transition-all uppercase">Pedidos</span>
+            <span class="block text-[11px] font-premium tracking-[0.3em] text-white/90 group-hover:text-brand-gold transition-all uppercase">Contacto</span>
         </a>
+        
         <div class="h-[1px] w-8 bg-brand-gold/30 my-2"></div>
         <a href="https://wa.me/51953435738" class="mobile-link">
             <span class="text-[8px] tracking-[0.3em] text-brand-gold uppercase font-bold italic">WhatsApp VIP</span>
