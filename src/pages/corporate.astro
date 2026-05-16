@@ -2,42 +2,140 @@
 import MainLayout from '../layouts/MainLayout.astro';
 ---
 
-<MainLayout title="Corporate | Alianzas de Lujo">
-  <main class="relative min-h-screen flex flex-col items-center justify-center px-6 overflow-hidden" style="background: linear-gradient(135deg, #050505 0%, #111111 100%);">
+<MainLayout title="Soluciones Corporate | Casa L&G Prestige">
+  <main class="bg-[#0b0707] text-white min-h-screen">
     
-    <div class="absolute left-1/2 top-0 w-[1px] h-32 bg-gradient-to-b from-[#C5A059] to-transparent"></div>
-
-    <div class="relative z-10 w-full max-w-4xl text-center">
-      <span class="inline-block px-4 py-1 border border-[#C5A059]/30 rounded-full text-[#C5A059] text-[9px] uppercase tracking-[0.4em] mb-10">
-        B2B Luxury Solutions
-      </span>
+    <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden px-6 pt-24">
+      <div class="absolute inset-0 z-0">
+         <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.8)_0%,rgba(0,0,0,0.4)_100%)] z-10"></div>
+         <div class="absolute top-0 right-0 w-[40%] h-full bg-[#C5A059] opacity-[0.02] skew-x-[-20deg]"></div>
+      </div>
       
-      <h1 class="font-premium text-5xl md:text-9xl text-white mb-12 tracking-tighter leading-[0.9]">
-        IDENTIDAD <br/><span class="text-[#C5A059]">CORPORATIVA</span>
-      </h1>
-      
-      <p class="font-sans text-white/50 text-sm md:text-base leading-loose max-w-xl mx-auto mb-16 italic">
-        "El prestigio de una marca se mide por la calidad de sus detalles." Elevamos el branding de su empresa a través de regalos institucionales y piezas de cortesía que reflejan excelencia.
-      </p>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 text-left">
-        <div class="p-6 border-l border-[#C5A059]/20">
-            <h3 class="text-white font-premium text-lg mb-2">Exclusividad</h3>
-            <p class="text-white/40 text-xs uppercase tracking-tighter">Diseños únicos para CEOs y directivos.</p>
+      <div class="relative z-20 text-center md:text-left max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="animate-slide-up">
+            <p class="font-sans text-[#C5A059] tracking-[0.8em] text-[11px] uppercase mb-6">
+                Executive & Business Line
+            </p>
+            <h1 class="font-premium text-5xl md:text-8xl text-white mb-8 tracking-tighter leading-[0.9]">
+              DISTINCIÓN <br/>
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#F2D184] to-[#C5A059]">
+                CORPORATIVA
+              </span>
+            </h1>
+            <p class="font-sans text-white/60 text-base md:text-lg leading-relaxed max-w-xl mb-12 font-light">
+              Elevamos la identidad de su institución a través de detalles que proyectan éxito y gratitud. La excelencia de Casa L&G al servicio de su empresa.
+            </p>
+            <div class="flex flex-wrap gap-6 justify-center md:justify-start">
+                <a href="#divisiones" class="px-10 py-4 bg-white text-black font-sans font-bold uppercase tracking-widest text-[11px] hover:bg-[#C5A059] hover:text-white transition-all">Ver Divisiones</a>
+                <a href="https://wa.me/51953435738" class="px-10 py-4 border border-white/20 text-white font-sans font-bold uppercase tracking-widest text-[11px] hover:border-[#C5A059] hover:text-[#C5A059] transition-all">Consultor B2B</a>
+            </div>
         </div>
-        <div class="p-6 border-l border-[#C5A059]/20">
-            <h3 class="text-white font-premium text-lg mb-2">Branding</h3>
-            <p class="text-white/40 text-xs uppercase tracking-tighter">Grabado de alta precisión de su emblema.</p>
-        </div>
-        <div class="p-6 border-l border-[#C5A059]/20">
-            <h3 class="text-white font-premium text-lg mb-2">Logística</h3>
-            <p class="text-white/40 text-xs uppercase tracking-tighter">Entregas nacionales con empaque premium.</p>
+        <div class="hidden md:flex justify-end opacity-20 md:opacity-100">
+             <div class="relative w-80 h-[500px] border border-[#C5A059]/30 p-4">
+                 <div class="absolute -top-4 -left-4 w-12 h-12 border-t-2 border-l-2 border-[#C5A059]"></div>
+                 <div class="w-full h-full bg-gradient-to-br from-white/5 to-transparent flex items-center justify-center italic font-premium text-6xl text-[#C5A059]/10 select-none">
+                    L&G
+                 </div>
+                 <div class="absolute -bottom-4 -right-4 w-12 h-12 border-b-2 border-r-2 border-[#C5A059]"></div>
+             </div>
         </div>
       </div>
+    </section>
 
-      <a href="https://wa.me/51953435738" target="_blank" class="group px-12 py-4 border border-[#C5A059] text-[#C5A059] font-sans text-[10px] uppercase tracking-[0.3em] transition-all hover:bg-[#C5A059] hover:text-black">
-        Solicitar Dossier Corporativo
-      </a>
-    </div>
+    <section id="divisiones" class="py-32 px-6 max-w-7xl mx-auto">
+      <div class="text-center mb-20">
+        <h2 class="font-premium text-4xl md:text-6xl mb-4">Nuestras Divisiones</h2>
+        <div class="h-[1px] w-24 bg-[#C5A059] mx-auto opacity-50"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <div class="group bg-white/[0.02] border border-white/5 overflow-hidden transition-all duration-500 hover:bg-white/[0.04]">
+          <div class="p-12 text-center">
+            <span class="text-[#C5A059] font-sans text-[10px] tracking-widest uppercase mb-4 block">Line 01</span>
+            <h3 class="font-premium text-3xl mb-6">Esencial</h3>
+            <p class="text-white/40 text-sm leading-relaxed mb-10">Detalles sobrios y elegantes. Diseñados para colaboradores y clientes frecuentes que valoran la distinción constante.</p>
+            <div class="pt-8 border-t border-white/5 flex flex-col gap-3 text-left">
+                <span class="text-[10px] uppercase text-white/60"><i class="fa-solid fa-check text-[#C5A059] mr-2"></i> Elegancia Minimalista</span>
+                <span class="text-[10px] uppercase text-white/60"><i class="fa-solid fa-check text-[#C5A059] mr-2"></i> Branding Institucional</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="group bg-white/[0.02] border-x-0 lg:border-x border-y border-white/10 lg:border-[#C5A059]/20 relative overflow-hidden transition-all duration-500 hover:bg-white/[0.05]">
+          <div class="absolute top-0 left-0 w-full h-1 bg-[#C5A059]"></div>
+          <div class="p-12 text-center">
+            <span class="text-[#C5A059] font-sans text-[10px] tracking-widest uppercase mb-4 block">Line 02</span>
+            <h3 class="font-premium text-3xl mb-6">Ejecutivo</h3>
+            <p class="text-white/40 text-sm leading-relaxed mb-10">Regalos Premium de alta gama. Pensados para Gerencias, socios estratégicos y cuentas clave que exigen excelencia.</p>
+            <div class="pt-8 border-t border-white/5 flex flex-col gap-3 text-left">
+                <span class="text-[10px] uppercase text-white/60"><i class="fa-solid fa-check text-[#C5A059] mr-2"></i> Materiales Nobles</span>
+                <span class="text-[10px] uppercase text-white/60"><i class="fa-solid fa-check text-[#C5A059] mr-2"></i> Personalización de Autor</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="group bg-white/[0.02] border border-white/5 overflow-hidden transition-all duration-500 hover:bg-white/[0.04]">
+          <div class="p-12 text-center">
+            <span class="text-[#C5A059] font-sans text-[10px] tracking-widest uppercase mb-4 block">Line 03</span>
+            <h3 class="font-premium text-3xl mb-6">Prestige</h3>
+            <p class="text-white/40 text-sm leading-relaxed mb-10">Experiencias empresariales exclusivas. Soluciones a medida para hitos institucionales y eventos de gala.</p>
+            <div class="pt-8 border-t border-white/5 flex flex-col gap-3 text-left">
+                <span class="text-[10px] uppercase text-white/60"><i class="fa-solid fa-check text-[#C5A059] mr-2"></i> Eventos Personalizados</span>
+                <span class="text-[10px] uppercase text-white/60"><i class="fa-solid fa-check text-[#C5A059] mr-2"></i> Logística Guante Blanco</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="bg-white/[0.01] py-32 border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-12">
+                <div class="text-center group">
+                    <div class="w-16 h-16 border border-[#C5A059]/20 flex items-center justify-center mx-auto mb-6 group-hover:bg-[#C5A059] transition-all">
+                        <i class="fa-solid fa-stamp text-xl group-hover:text-black"></i>
+                    </div>
+                    <h4 class="font-premium text-sm tracking-widest uppercase">Marca Propia</h4>
+                </div>
+                <div class="text-center group">
+                    <div class="w-16 h-16 border border-[#C5A059]/20 flex items-center justify-center mx-auto mb-6 group-hover:bg-[#C5A059] transition-all">
+                        <i class="fa-solid fa-box-archive text-xl group-hover:text-black"></i>
+                    </div>
+                    <h4 class="font-premium text-sm tracking-widest uppercase">Cajas Especiales</h4>
+                </div>
+                <div class="text-center group">
+                    <div class="w-16 h-16 border border-[#C5A059]/20 flex items-center justify-center mx-auto mb-6 group-hover:bg-[#C5A059] transition-all">
+                        <i class="fa-solid fa-building-columns text-xl group-hover:text-black"></i>
+                    </div>
+                    <h4 class="font-premium text-sm tracking-widest uppercase">Regalos Institucionales</h4>
+                </div>
+                <div class="text-center group">
+                    <div class="w-16 h-16 border border-[#C5A059]/20 flex items-center justify-center mx-auto mb-6 group-hover:bg-[#C5A059] transition-all">
+                        <i class="fa-solid fa-handshake-simple text-xl group-hover:text-black"></i>
+                    </div>
+                    <h4 class="font-premium text-sm tracking-widest uppercase">Eventos VIP</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 px-6 text-center">
+        <h2 class="font-premium text-3xl md:text-5xl mb-12">Impulse su Presencia Empresarial</h2>
+        <a href="https://wa.me/51953435738" target="_blank" class="inline-block px-16 py-6 bg-transparent border-2 border-[#C5A059] text-[#C5A059] font-sans font-bold uppercase tracking-[0.4em] transition-all hover:bg-[#C5A059] hover:text-black shadow-[0_0_40px_rgba(197,160,89,0.1)]">
+            Solicitar Dossier Corporate
+        </a>
+    </section>
+
   </main>
 </Layout>
+
+<style>
+  @keyframes slide-up {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  .animate-slide-up { animation: slide-up 1s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+  .font-premium { font-family: 'Cinzel', serif; }
+</style>
