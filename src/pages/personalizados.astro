@@ -2,20 +2,43 @@
 import MainLayout from '../layouts/MainLayout.astro';
 ---
 
-<MainLayout title="Diseños Personalizados">
-  <section class="relative min-h-screen text-white flex items-center justify-center overflow-hidden pt-20" style="background-color: #0b0707;">
-    <div class="relative z-10 text-center px-6 flex flex-col items-center max-w-3xl mx-auto">
-      <p class="font-sans text-[#C5A059] tracking-[0.4em] text-[10px] md:text-[12px] uppercase mb-6">Hecho Exclusivamente Para Ti</p>
-      <h1 class="text-4xl md:text-7xl text-white mb-8 tracking-wide uppercase font-premium leading-tight">
-        Piezas de <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-[#C5A059] to-white">Autor Único</span>
-      </h1>
-      <div class="h-[1px] w-20 bg-[#C5A059]/40 mb-8"></div>
-      <p class="font-sans text-white/70 text-sm md:text-base leading-relaxed tracking-wide mb-12 max-w-xl">
-        Transformamos tus ideas en objetos de herencia. Configura materiales y grabados de monogramas guiado por expertos.
-      </p>
-      <a href="https://wa.me/51953435738" target="_blank" rel="noopener noreferrer" class="group relative inline-flex items-center justify-center px-12 py-4 border border-[#C5A059] overflow-hidden transition-all duration-500 hover:bg-[#C5A059]">
-        <span class="relative z-10 font-sans text-[10px] tracking-widest text-[#C5A059] group-hover:text-black uppercase">Iniciar Diseño Personalizado</span>
-      </a>
+<MainLayout title="Personalizados | Piezas de Autor">
+  <main class="relative min-h-screen flex items-center justify-center px-6" style="background-color: #080808;">
+    
+    <div class="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+      
+      <div class="order-2 lg:order-1">
+        <span class="text-[#C5A059] font-sans text-[11px] uppercase tracking-[0.5em] block mb-6">Custom Masterpieces</span>
+        <h1 class="font-premium text-5xl md:text-7xl text-white mb-8 leading-tight">
+          CREADO POR <br/> <span class="italic text-white/40">USTED</span>,<br/> FORJADO POR <span class="text-[#C5A059]">NOSOTROS</span>
+        </h1>
+        
+        <div class="space-y-6 mb-12">
+            <p class="text-white/70 font-sans text-sm md:text-base leading-relaxed border-b border-white/5 pb-6">
+                Seleccione entre los materiales más finos del mundo y grabe su legado. Cada pieza personalizada es una historia contada a través del tacto.
+            </p>
+            <ul class="text-[#C5A059] font-sans text-[10px] tracking-[0.2em] uppercase space-y-3">
+                <li>• Monogramas de precisión láser</li>
+                <li>• Selección de pieles y maderas exóticas</li>
+                <li>• Consultoría de diseño 1 a 1</li>
+            </ul>
+        </div>
+
+        <a href="https://wa.me/51953435738" target="_blank" class="inline-block py-5 px-12 bg-white text-black font-sans text-[11px] font-bold uppercase tracking-widest transition-all hover:bg-[#C5A059] hover:text-black">
+          Iniciar Proyecto Personalizado
+        </a>
+      </div>
+
+      <div class="order-1 lg:order-2 relative group">
+        <div class="absolute inset-0 bg-[#C5A059]/10 blur-[60px] rounded-full scale-75 group-hover:scale-100 transition-transform duration-700"></div>
+        <div class="relative aspect-square border border-white/10 flex items-center justify-center p-10 bg-white/[0.01] backdrop-blur-3xl overflow-hidden">
+            <svg class="w-32 h-32 text-[#C5A059]/20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+            <div class="absolute bottom-10 left-10 text-left">
+                <span class="block text-white/20 font-premium text-6xl select-none">L&G</span>
+            </div>
+        </div>
+      </div>
+
     </div>
-  </section>
-</MainLayout>
+  </main>
+</Layout>
