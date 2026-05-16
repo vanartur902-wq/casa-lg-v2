@@ -2,40 +2,107 @@
 import MainLayout from '../layouts/MainLayout.astro';
 ---
 
-<MainLayout title="Experiencias | Luxury Moments">
-  <main class="relative min-h-screen flex flex-col items-center justify-center px-6 overflow-hidden" style="background: radial-gradient(circle at top, #1a1111 0%, #050505 100%);">
+<MainLayout title="Experiencias Exclusivas | Casa L&G">
+  <main class="bg-[#0b0707] text-white">
     
-    <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-[#C5A059] opacity-[0.05] blur-[120px] rounded-full"></div>
-
-    <div class="relative z-10 w-full max-w-5xl py-20 flex flex-col items-center">
-      <div class="backdrop-blur-xl bg-white/[0.02] border border-white/[0.05] p-8 md:p-16 rounded-[40px] shadow-2xl text-center">
-        
-        <p class="font-sans text-[#C5A059] tracking-[0.6em] text-[10px] md:text-[12px] uppercase mb-8 opacity-80">
-          Curaduría de Momentos
+    <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden px-6 pt-20">
+      <div class="absolute inset-0 z-0 bg-[radial-gradient(circle_at_50%_50%,_#1a1111_0%,_#0b0707_100%)]"></div>
+      
+      <div class="relative z-10 text-center max-w-4xl mx-auto">
+        <p class="font-sans text-[#C5A059] tracking-[0.6em] text-[10px] md:text-[12px] uppercase mb-6 animate-slide-up">
+          El Arte de Vivir el Detalle
         </p>
-        
-        <h1 class="font-premium text-5xl md:text-8xl text-white mb-10 tracking-tight leading-none">
+        <h1 class="font-premium text-5xl md:text-8xl text-white mb-8 tracking-tighter leading-none animate-fade-in opacity-0 [animation-fill-mode:forwards] [animation-delay:200ms]">
           EXPERIENCIAS <br/>
-          <span class="italic text-transparent bg-clip-text bg-gradient-to-b from-[#F2D184] via-[#C5A059] to-[#8C6D2E]">
-            Sin Límites
+          <span class="italic text-transparent bg-clip-text bg-gradient-to-r from-[#F2D184] via-[#C5A059] to-[#8C6D2E]">
+            Inolvidables
           </span>
         </h1>
-
-        <div class="flex justify-center gap-4 mb-10">
-            <div class="h-[1px] w-8 bg-[#C5A059]/30 self-center"></div>
-            <span class="font-sans text-[10px] text-[#C5A059] uppercase tracking-widest">Sensorial · Privado · Único</span>
-            <div class="h-[1px] w-8 bg-[#C5A059]/30 self-center"></div>
-        </div>
-        
-        <p class="font-sans text-white/60 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-14 font-light">
-          Desde catas privadas de destilados de colección hasta talleres de maridaje artesanal. Creamos atmósferas donde el tiempo se detiene y el detalle es el protagonista absoluto.
+        <p class="font-sans text-white/50 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-12 font-light animate-fade-in opacity-0 [animation-fill-mode:forwards] [animation-delay:400ms]">
+          Diseñamos emociones y momentos a medida. En Casa L&G, no solo entregamos un detalle; creamos la atmósfera perfecta para celebrar la vida.
         </p>
-
-        <a href="https://wa.me/51953435738" target="_blank" class="group relative inline-flex items-center gap-4 px-14 py-5 bg-gradient-to-r from-[#C5A059] to-[#8C6D2E] rounded-full transition-all duration-500 hover:scale-105 active:scale-95 shadow-[0_10px_30px_rgba(197,160,89,0.3)]">
-          <span class="font-sans text-[11px] tracking-[0.2em] text-black font-bold uppercase">Agendar Experiencia VIP</span>
-          <svg class="w-4 h-4 text-black transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-        </a>
       </div>
-    </div>
+    </section>
+
+    <section class="py-24 px-6 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <div class="group relative bg-white/[0.02] border border-white/5 p-10 rounded-[30px] transition-all duration-700 hover:bg-white/[0.05] hover:border-[#C5A059]/30">
+          <div class="mb-8 text-[#C5A059] opacity-40 group-hover:opacity-100 transition-opacity duration-500">
+            <i class="fa-solid fa-wine-cheese text-4xl"></i>
+          </div>
+          <h3 class="font-premium text-2xl mb-4">Noche de Vino & Quesos</h3>
+          <p class="text-white/50 text-sm leading-relaxed mb-8">Una selección curada de cepas premium y quesos artesanales, diseñada para una velada de sofisticación absoluta.</p>
+          <div class="h-[1px] w-full bg-white/5 group-hover:bg-[#C5A059]/20 transition-colors"></div>
+        </div>
+
+        <div class="group relative bg-white/[0.02] border border-white/5 p-10 rounded-[30px] transition-all duration-700 hover:bg-white/[0.05] hover:border-[#C5A059]/30">
+          <div class="mb-8 text-[#C5A059] opacity-40 group-hover:opacity-100 transition-opacity duration-500">
+            <i class="fa-solid fa-basket-shopping text-4xl"></i>
+          </div>
+          <h3 class="font-premium text-2xl mb-4">Picnic Deluxe</h3>
+          <p class="text-white/50 text-sm leading-relaxed mb-8">Llevamos el lujo al aire libre. Un montaje impecable con detalles gourmet para conectar con la naturaleza.</p>
+          <div class="h-[1px] w-full bg-white/5 group-hover:bg-[#C5A059]/20 transition-colors"></div>
+        </div>
+
+        <div class="group relative bg-white/[0.02] border border-white/5 p-10 rounded-[30px] transition-all duration-700 hover:bg-white/[0.05] hover:border-[#C5A059]/30">
+          <div class="mb-8 text-[#C5A059] opacity-40 group-hover:opacity-100 transition-opacity duration-500">
+            <i class="fa-solid fa-cake-candles text-4xl"></i>
+          </div>
+          <h3 class="font-premium text-2xl mb-4">Celebraciones Especiales</h3>
+          <p class="text-white/50 text-sm leading-relaxed mb-8">Cualquier hito merece un despliegue de elegancia. Personalizamos cada detalle para que tu evento sea único.</p>
+          <div class="h-[1px] w-full bg-white/5 group-hover:bg-[#C5A059]/20 transition-colors"></div>
+        </div>
+
+        <div class="group relative bg-white/[0.02] border border-white/5 p-10 rounded-[30px] transition-all duration-700 hover:bg-white/[0.05] hover:border-[#C5A059]/30">
+          <div class="mb-8 text-[#C5A059] opacity-40 group-hover:opacity-100 transition-opacity duration-500">
+            <i class="fa-solid fa-heart text-4xl"></i>
+          </div>
+          <h3 class="font-premium text-2xl mb-4">Experiencia Aniversario</h3>
+          <p class="text-white/50 text-sm leading-relaxed mb-8">El romance elevado a su máxima expresión. Detalles grabados y atmósferas que cuentan su historia de amor.</p>
+          <div class="h-[1px] w-full bg-white/5 group-hover:bg-[#C5A059]/20 transition-colors"></div>
+        </div>
+
+        <div class="group relative bg-white/[0.02] border border-white/5 p-10 rounded-[30px] transition-all duration-700 hover:bg-white/[0.05] hover:border-[#C5A059]/30">
+          <div class="mb-8 text-[#C5A059] opacity-40 group-hover:opacity-100 transition-opacity duration-500">
+            <i class="fa-solid fa-champagne-glasses text-4xl"></i>
+          </div>
+          <h3 class="font-premium text-2xl mb-4">Brunch Exclusivo</h3>
+          <p class="text-white/50 text-sm leading-relaxed mb-8">Mañanas radiantes con sabores delicados y burbujas. La forma más elegante de comenzar una celebración.</p>
+          <div class="h-[1px] w-full bg-white/5 group-hover:bg-[#C5A059]/20 transition-colors"></div>
+        </div>
+
+        <div class="group relative bg-white/[0.02] border border-white/5 p-10 rounded-[30px] transition-all duration-700 hover:bg-white/[0.05] hover:border-[#C5A059]/30">
+          <div class="mb-8 text-[#C5A059] opacity-40 group-hover:opacity-100 transition-opacity duration-500">
+            <i class="fa-solid fa-utensils text-4xl"></i>
+          </div>
+          <h3 class="font-premium text-2xl mb-4">Cena Romántica</h3>
+          <p class="text-white/50 text-sm leading-relaxed mb-8">Un chef privado, música tenue y un montaje de mesa de revista. La intimidad nunca fue tan lujosa.</p>
+          <div class="h-[1px] w-full bg-white/5 group-hover:bg-[#C5A059]/20 transition-colors"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="py-20 text-center">
+      <a href="https://wa.me/51953435738" target="_blank" class="inline-flex items-center gap-4 px-12 py-5 bg-[#C5A059] text-black font-sans font-bold uppercase tracking-widest rounded-full transition-transform hover:scale-105 active:scale-95 shadow-[0_10px_30px_rgba(197,160,89,0.3)]">
+        Cotizar Mi Experiencia VIP
+      </a>
+    </section>
+
   </main>
 </Layout>
+
+<style>
+  @keyframes slide-up {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  .animate-slide-up { animation: slide-up 1s ease-out; }
+  .animate-fade-in { animation: fade-in 1.5s ease-out forwards; }
+  .font-premium { font-family: 'Cinzel', serif; }
+</style>
