@@ -54,12 +54,12 @@ import Hero from '../components/Hero.astro';
       </div>
 
       <div id="detail-view" class="hidden fixed inset-0 z-[100] bg-[#0b0707] p-6 md:p-20 overflow-y-auto animate-fade-in">
-        <button onclick="closeSection()" class="fixed top-10 right-10 z-[110] text-[#C5A059] uppercase tracking-widest text-[10px] flex items-center gap-3 hover:text-white transition-colors bg-black/40 px-4 py-2 rounded-full backdrop-blur-md border border-white/5">
-          <i class="fa-solid fa-arrow-left"></i> Regresar al Inicio
+        <button onclick="closeSection()" class="fixed top-10 right-10 z-[110] text-[#C5A059] uppercase tracking-widest text-[10px] flex items-center gap-3 hover:text-white transition-colors bg-black/40 px-4 py-3 rounded-full backdrop-blur-md border border-white/5">
+          <i class="fa-solid fa-xmark text-sm"></i> Cerrar Apartado
         </button>
 
         <div id="detail-content" class="max-w-6xl mx-auto py-12">
-          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -147,20 +147,19 @@ import Hero from '../components/Hero.astro';
     `;
     
     detailView.classList.remove('hidden');
-    document.body.style.overflow = 'hidden'; // Detiene el scroll del fondo
+    document.body.style.overflow = 'hidden'; 
   }
 
   function closeSection() {
     const detailView = document.getElementById('detail-view');
     detailView.classList.add('hidden');
-    document.body.style.overflow = 'auto'; // Devuelve el scroll
+    document.body.style.overflow = 'auto'; 
   }
 </script>
 
 <style>
   .font-premium { font-family: 'Cinzel', serif; }
   
-  /* Animación personalizada de rebote suave (arriba y abajo ligeramente) */
   @keyframes bounce-soft {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-8px); }
