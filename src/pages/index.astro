@@ -53,18 +53,18 @@ import Hero from '../components/Hero.astro';
 
       </div>
 
-      <div id="detail-view" class="hidden fixed inset-0 z-[100] bg-[#0b0707] p-6 md:p-20 overflow-y-auto animate-fade-in transition-all duration-500">
+      <div id="detail-view" class="hidden fixed inset-0 z-[150] bg-[#0b0707] p-6 md:p-20 overflow-y-auto animate-fade-in transition-all duration-500">
         
-        <button onclick="closeSection()" class="fixed top-8 right-8 md:top-12 md:right-12 z-[110] text-[#C5A059] uppercase tracking-widest text-[10px] flex items-center gap-3 hover:text-white transition-colors bg-black/40 px-5 py-3 rounded-full backdrop-blur-md border border-white/5 group">
-          <i class="fa-solid fa-arrow-left text-sm group-hover:-translate-x-1 transition-transform"></i> Regresar
+        <button onclick="closeSection()" class="fixed top-6 right-6 md:top-12 md:right-12 z-[200] text-[#C5A059] uppercase tracking-widest text-[10px] flex items-center gap-2 hover:text-white transition-colors bg-black/60 px-4 py-2.5 rounded-full backdrop-blur-md border border-[#C5A059]/30 group cursor-pointer shadow-lg">
+          <i class="fa-solid fa-xmark text-xs group-hover:rotate-90 transition-transform duration-300"></i> Cerrar
         </button>
 
-        <div id="detail-content" class="max-w-6xl mx-auto py-12">
+        <div id="detail-content" class="max-w-6xl mx-auto pt-24 md:pt-12 pb-12">
           </div>
       </div>
     </section>
   </main>
-</Layout>
+</MainLayout>
 
 <script is:inline>
   // CONTENIDO DINÁMICO CON LA TEMÁTICA ESTÁNDAR DE ORO
@@ -73,7 +73,7 @@ import Hero from '../components/Hero.astro';
       title: "Productos Destacados",
       subtitle: "Piezas de Alta Gama",
       content: `
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 mt-24 md:mt-12">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 mt-12">
           <div class="group bg-white/[0.01] border border-white/5 p-6 rounded-2xl transition-all duration-300 hover:border-[#C5A059]/20">
             <div class="overflow-hidden mb-6 aspect-square rounded-lg border border-white/5"><img src="https://i.pinimg.com/1200x/92/1b/8b/921b8b6b062006c00cb165d2c35844de.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Caja Sorpresa" /></div>
             <span class="text-[#C5A059] text-[9px] tracking-widest uppercase mb-1 block">Detalle Día Del Padre</span>
@@ -99,7 +99,7 @@ import Hero from '../components/Hero.astro';
       title: "Temporadas Especiales",
       subtitle: "Celebraciones Exclusivas",
       content: `
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mt-24 md:mt-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mt-12">
           <div class="space-y-6">
             <span class="text-[#C5A059] text-[10px] tracking-[0.3em] uppercase block">Línea Temporal Autor</span>
             <h3 class="font-premium text-3xl md:text-5xl text-white uppercase tracking-wide">Momentos Eternos</h3>
@@ -117,7 +117,7 @@ import Hero from '../components/Hero.astro';
       title: "Nuevas Colecciones",
       subtitle: "Lanzamientos de Reserva",
       content: `
-        <div class="flex flex-col items-center text-center py-12 max-w-2xl mx-auto mt-24 md:mt-0">
+        <div class="flex flex-col items-center text-center py-12 max-w-2xl mx-auto">
           <div class="w-20 h-20 border border-[#C5A059]/20 flex items-center justify-center rounded-full mb-8 text-[#C5A059] bg-white/[0.01]">
             <i class="fa-solid fa-gem text-2xl"></i>
           </div>
@@ -136,9 +136,9 @@ import Hero from '../components/Hero.astro';
     const detailView = document.getElementById('detail-view');
     const content = document.getElementById('detail-content');
     
-    // AJUSTE DE CLASES CSS EN JAVASCRIPT PARA MOBILE (mt-12 para subtitulo en mobile)
+    // Inyección de contenido limpia con transiciones CSS optimizadas
     content.innerHTML = `
-      <div class="mb-12 mt-12 md:mt-0 animate-slide-up">
+      <div class="mb-12 animate-slide-up">
         <span class="text-[#C5A059] tracking-[0.5em] uppercase text-[10px] mb-2 block">${data.subtitle}</span>
         <h1 class="font-premium text-4xl md:text-6xl text-white uppercase tracking-widest leading-tight">${data.title}</h1>
         <div class="h-[1px] w-16 bg-[#C5A059]/30 mt-6"></div>
@@ -149,13 +149,13 @@ import Hero from '../components/Hero.astro';
     `;
     
     detailView.classList.remove('hidden');
-    document.body.style.overflow = 'hidden'; // Detiene el scroll del fondo
+    document.body.style.overflow = 'hidden'; 
   }
 
   function closeSection() {
     const detailView = document.getElementById('detail-view');
     detailView.classList.add('hidden');
-    document.body.style.overflow = 'auto'; // Devuelve el scroll
+    document.body.style.overflow = 'auto'; 
   }
 </script>
 
