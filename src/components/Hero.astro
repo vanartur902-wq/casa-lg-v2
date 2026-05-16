@@ -26,12 +26,29 @@
       CASA L&G
     </h1>
 
-    <div class="reveal" style="animation-delay: 0.8s;">
-      <a href="/catalogo" class="group relative inline-flex items-center justify-center px-12 py-4 border border-luxury-gold overflow-hidden transition-all duration-500 hover:bg-luxury-gold">
-        <span class="relative z-10 font-sans text-[10px] tracking-widest text-luxury-gold group-hover:text-black uppercase transition-colors">
-          Descubrir Colección
+    <div class="reveal pointer-events-none" style="animation-delay: 0.8s;">
+      <div class="flex flex-col items-center justify-center mt-4 animate-bounce-soft">
+        <span class="text-[9px] uppercase tracking-[0.4em] text-luxury-gold mb-3 font-light">
+          Explorar Esencia
         </span>
-      </a>
+        <div class="w-[1px] h-10 bg-gradient-to-b from-luxury-gold to-transparent opacity-70"></div>
+      </div>
     </div>
   </div>
 </section>
+
+<style>
+  /* Animación de rebote de alta gama: sutil, fluida y lenta */
+  @keyframes bounce-soft {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px); /* Se eleva solo un poco de manera delicada */
+    }
+  }
+
+  .animate-bounce-soft {
+    animation: bounce-soft 3s ease-in-out infinite;
+  }
+</style>
