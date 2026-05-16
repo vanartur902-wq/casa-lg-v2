@@ -17,7 +17,7 @@ import Hero from '../components/Hero.astro';
       <div class="text-center max-w-3xl mx-auto mb-20">
         <h2 class="font-premium text-3xl md:text-5xl mb-6 tracking-wide uppercase">La esencia de Casa L&G</h2>
         <p class="text-white/50 text-sm md:text-base leading-relaxed font-light">
-          Una presentación elegante de la marca donde los clientes descubren detalles exclusivos, colecciones especiales y experiencias memorables para cada ocasión.
+          Una presentación elegante de la marca donde los clientes descubren detalles exclusivos, colecciones especiales y experiences memorables para cada ocasión.
         </p>
         <div class="h-[1px] w-12 bg-[#C5A059]/30 mx-auto mt-8"></div>
       </div>
@@ -55,8 +55,10 @@ import Hero from '../components/Hero.astro';
 
       <div id="detail-view" class="hidden fixed inset-0 z-[150] bg-[#0b0707] p-6 md:p-20 overflow-y-auto animate-fade-in transition-all duration-500">
         
-        <button onclick="closeSection()" class="fixed top-4 right-4 md:top-10 md:right-10 z-[999] text-[#C5A059] hover:text-white transition-colors bg-black/70 hover:bg-black w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full border border-[#C5A059]/30 shadow-2xl group cursor-pointer" aria-label="Cerrar apartado">
-          <i class="fa-solid fa-xmark text-lg md:text-xl group-hover:rotate-90 transition-transform duration-300"></i>
+        <button onclick="closeSection()" class="fixed top-5 right-5 md:top-10 md:right-10 z-[999] text-[#C5A059] hover:text-white bg-black/80 hover:bg-black w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full border border-[#C5A059]/40 shadow-2xl transition-all duration-300 group cursor-pointer" aria-label="Cerrar">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-5 h-5 md:w-6 md:h-6 group-hover:rotate-90 transition-transform duration-300">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
         </button>
 
         <div id="detail-content" class="max-w-6xl mx-auto pt-28 md:pt-12 pb-12">
@@ -105,7 +107,7 @@ import Hero from '../components/Hero.astro';
             <h3 class="font-premium text-3xl md:text-5xl text-white uppercase tracking-wide">Momentos Eternos</h3>
             <p class="text-white/50 font-light leading-relaxed">Diseñamos colecciones efímeras y adaptadas a las festividades más importantes del año. Piezas por tiempo limitado con empaques temáticos estructurales únicos.</p>
             <div class="h-[1px] w-20 bg-[#C5A059]/40 py-2"></div>
-            <p class="text-[#C5A059] text-xs uppercase tracking-widest"><i class="fa-solid fa-calendar-days mr-2"></i> Próxima Edición: San Valentín & Eventos Corporativos</p>
+            <p class="text-[#C5A059] text-xs uppercase tracking-widest">Próxima Edición: San Valentín & Eventos Corporativos</p>
           </div>
           <div class="h-[400px] border border-white/10 overflow-hidden rounded-lg">
             <img src="https://i.pinimg.com/1200x/46/e7/51/46e751b112f4ebe5c69b0574000c2718.jpg" class="w-full h-full object-cover" alt="Temporadas" />
@@ -119,7 +121,9 @@ import Hero from '../components/Hero.astro';
       content: `
         <div class="flex flex-col items-center text-center py-12 max-w-2xl mx-auto">
           <div class="w-20 h-20 border border-[#C5A059]/20 flex items-center justify-center rounded-full mb-8 text-[#C5A059] bg-white/[0.01]">
-            <i class="fa-solid fa-gem text-2xl"></i>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+            </svg>
           </div>
           <h3 class="font-premium text-4xl text-white mb-6 uppercase tracking-wider">Línea Prestige Limitada</h3>
           <p class="text-white/40 font-light leading-relaxed mb-8">
